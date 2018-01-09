@@ -1,0 +1,28 @@
+.story {
+	background-color: #eee;
+	box-sizing: border-box;
+	padding: 100px 0;
+	z-index: 5;
+}
+
+.story__content,
+.story__header {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.story__content {
+	line-height: 1.5;
+}
+
+.story__header {
+	color: $blue;
+	font-family: 'patua one';
+	font-size: 28px;
+	padding: 0 0 20px;
+}
+
+.story__content {
+	color: #333;
+	font-size: 18px;
+}
