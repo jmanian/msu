@@ -1,4 +1,164 @@
 .team {
 	background-color: #fff;
-	min-height: 1000px; /********* TEMPORARY */
+	padding: 100px 0;
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	.heading {
+		color: $blue;
+		font-size: 42px;
+		text-align: center;
+		margin: 0 0 50px;
+	}
 }
+
+.team__row {
+	text-align: center;
+
+	&:first-of-type {
+		margin: 0 0 60px;
+	}
+
+	.member {
+		background-color: $light-gray-bg;
+		@include border-radius(6px);
+		display: inline-block;
+		margin: 0 30px;
+		padding: 30px 0;
+		text-align: center;
+		width: 300px;
+		vertical-align: top;
+
+		.picture {
+			background-image: url('../../dist/images/team.jpg');
+			background-repeat: no-repeat;
+			height: 200px;
+			margin: 0 auto 20px;
+			transition: 200ms;
+			width: 200px;
+			@include border-radius(50%);
+		}
+
+		.details {
+			background-color: #eee;
+			@include border-radius(6px);
+		}
+
+		.name {
+			color: $blue;
+			font-size: 30px;
+			padding: 0 0 5px;
+			-webkit-font-smoothing: antialiased;
+			@include heading-font;
+		}
+
+		.title {
+			color: #333;
+			font-size: 18px;
+			padding: 0 0 10px;
+			-webkit-font-smoothing: antialiased;
+			@include body-font;
+		}
+
+		.quote {
+			@include body-font;
+		}
+
+		&.sam {
+			.picture { background-position: 0 0; }
+			&:hover .picture { background-position: 0 100%; }
+		}
+
+		&.pat {
+			.picture { background-position: 25% 0; }
+			&:hover .picture { background-position: 25% 100%; }
+		}
+
+		&.jeff {
+			.picture { background-position: 50% 0; }
+			&:hover .picture { background-position: 50% 100%; }
+		}
+
+		&.dan {
+			.picture { background-position: 75% 0; }
+			&:hover .picture { background-position: 75% 100%; }
+		}
+
+		&.aaron {
+			.picture { background-position: 100% 0; }
+			&:hover .picture { background-position: 100% 100%;}
+		}
+	}
+}
+
+// .team__member {
+// 	margin: 20px auto;
+// 	max-width: 520px;
+// 	width: 100%;
+// 	display: flex;
+// 	flex-direction: row;
+
+// 	.picture {
+// 		background-image: url('../../dist/images/team2.jpg');
+// 		background-repeat: no-repeat;
+// 		height: 200px;
+// 		margin: 0 20px 0 0;
+// 		transition: 200ms;
+// 		width: 200px;
+// 		@include border-radius(50%);
+// 	}
+
+// 	.details {
+// 		display: inline-block;
+// 		max-width: 300px;
+// 		padding: 20px 0;
+
+// 		.name {
+// 			color: $blue;
+// 			font-size: 32px;
+// 			-webkit-font-smoothing: antialiased;
+// 			@include heading-font;
+// 		}
+
+// 		.title {
+// 			color: $msu-blue-2;
+// 			font-size: 20px;
+// 			padding: 0 0 10px;
+// 			-webkit-font-smoothing: antialiased;
+// 			@include heading-font;
+// 		}
+
+// 		.quote {
+// 			@include body-font;
+// 		}
+// 	}
+
+// 	&.sam {
+// 		.picture { background-position: 0 0; }
+// 		.picture:hover { background-position: 0 100%; }
+// 	}
+
+// 	&.pat {
+// 		.picture { background-position: 25% 0; }
+// 		.picture:hover { background-position: 25% 100%; }
+// 	}
+
+// 	&.jeff {
+// 		.picture { background-position: 50% 0; }
+// 		.picture:hover { background-position: 50% 100%; }
+// 	}
+
+// 	&.dan {
+// 		.picture { background-position: 75% 0; }
+// 		.picture:hover { background-position: 75% 100%; }
+// 	}
+
+// 	&.aaron {
+// 		.picture { background-position: 100% 0; }
+// 		.picture:hover { background-position: 100% 100%;}
+// 	}
+
+// }

@@ -15,19 +15,18 @@
 	color: $purple;
 	font-size: 22px;
 	text-align: center;
-	font-family: 'patua one';
 	-webkit-font-smoothing: antialiased;
 	font-size: 3vw;
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 0 0 40px;
+	@include heading-font;
 }
 
 .social-header {
 	margin-top: 50px;
 	color: #fff;
 }
-
 
 .steamfeed {
 	bottom: 0;
@@ -38,53 +37,51 @@
 	z-index: 0;
 }
 
-
 .steamfeed__row {
 	display: flex;
 	flex-direction: row;
-	// animation: slide 3000s infinite linear;
 }
 
 .steamfeed__img {
 	flex: 1;
 	padding: 5px;
+	
+	img {
+		opacity: .2;
+		filter: gray; /* IE6-9 */
+		-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+		filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+		width: 100%;
+	}
 }
 
-.steamfeed__img img {
-	opacity: .2;
-	filter: gray; /* IE6-9 */
-	-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-	filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-	width: 100%;
-}
 
-.social__icons {
+.social__links {
 	display: flex;
 	flex-direction: row;
 	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
+	
+	.social__link {
+		flex: 1;
+		margin: 40px;
+		cursor: pointer;
+		transition: 120ms;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&:active {
+			transform: scale(1.075);
+		}
+
+		svg path {
+			fill: #fff;
+		}
+	}
 }
-
-.social__icons svg {
-	flex: 1;
-	margin: 40px;
-	cursor: pointer;
-	transition: 120ms;
-
-	&:hover {
-		transform: scale(1.1);
-	}
-
-	&:active {
-		transform: scale(1.075);
-	}
-
-	path {
-		fill: #fff;
-	}
-}
-
 
 .connect > *:not(.steamfeed) {
 	position: relative;
@@ -113,16 +110,3 @@
 	}
 }
 
-
-/**************************************************
-	ANIMATIONS
-**************************************************/
-// @keyframes slide {
-// 	from {
-// 		transform: translateX(0);
-// 	}
-
-// 	to {
-// 		transform: translateX(10000px);
-// 	}
-// }

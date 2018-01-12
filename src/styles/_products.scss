@@ -1,26 +1,17 @@
 /**************************************************
 	PRODUCTS - GLOBAL
 **************************************************/
-.products {
+.products__row {
 	display: flex;
 	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1200px;
 
-	.section-title {
-		position: absolute;
-		top: -10px;
-		left: 20px;
-		font-family: 'patua one', cursive;
-		text-transform: uppercase;
-		background-color: #eee;
-		color: $blue;
-		padding: 10px 20px;
+	.products__col {
+		flex: 1;
+		padding: 40px;
+		text-align: center;
 	}
-}
-
-.products-col {
-	flex: 1;
-	padding: 4vh 4vw;
-	text-align: center;
 }
 
 .skew-bg::before {
@@ -38,18 +29,18 @@
 
 .product-title {
 	color: #fff;
-	font-family: 'Patua One', cursive;
-	font-size: 3vw;
+	font-size: 34px;
 	line-height: 2;
 	text-align: left;
+	@include heading-font;
 }
 
 .product-description {
 	color: #fff;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.5vw;
+	font-size: 22px;
 	line-height: 1.5;
 	text-align: left;
+	@include body-font;
 }
 
 
@@ -66,7 +57,7 @@
 
 .gigs::before {
 	background: $blue;
-	background-image: url('../../dist/images/live-bg.png');
+	// background-image: url('../../dist/images/live-bg.png');
 	background-attachment: fixed;
 	height: 200%;
 	top: -20%;
@@ -82,6 +73,20 @@
 	z-index: 0;
 	width: 100%;
 	overflow: hidden;
+}
+
+.gigs .gigs__title {
+	position: relative;
+	svg {
+		position: absolute;
+		opacity: .3;
+		left: calc(50% - 105px);
+		// transform: rotate(-20deg);
+		top: 100px;
+		width: 240px;
+		height: 240px;
+		z-index: -1;
+	}
 }
 
 // .gigs .product-description {
@@ -100,7 +105,7 @@
 
 .music::before {
 	background-color: $green;
-	background-image: url('../../dist/images/music-bg2.png');
+	// background-image: url('../../dist/images/music-bg2.png');
 	background-attachment: fixed;
 }
 
@@ -116,6 +121,18 @@
 	right: 5%;
 	left: 55%;
 	overflow: hidden;
+}
+
+.music .music__title {
+	position: relative;
+	svg {
+		position: absolute;
+		opacity: .3;
+		left: calc(50% - 125px);
+		top: 0;
+		width: 250px;
+		z-index: -1;
+	}
 }
 
 // .music .product-description {

@@ -1,8 +1,5 @@
-// @import url('https://fonts.googleapis.com/css?family=Monoton|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro');
 @import 'variables';
-@import 'mediaqueries';
-@import 'header';
 @import 'products';
 @import 'testimonials';
 @import 'story';
@@ -21,17 +18,23 @@ input {
 }
 
 .section-title {
-	left: 0;
-	position: absolute;
-	top: 0;
+	display: none;
+	// position: absolute;
+	// top: -10px;
+	// left: 20px;
+	// font-family: 'patua one', cursive;
+	// text-transform: uppercase;
+	// background-color: #fff;
+	// color: $blue;
+	// padding: 10px 20px;
 }
 
 .mobile-steam-unit h1,h2,h3,h4,h5.h6 {
-	font-family: 'Patua One', cursive;
+	@include heading-font;
 	-webkit-font-smoothing: antialiased;
 }
 
 .mobile-steam-unit p {
-	font-family: 'Source Sans Pro', helvetica, arial, sans-serif;
+	@include body-font;
 	-webkit-font-smoothing: antialiased;
 }

@@ -1,8 +1,36 @@
 /**************************************************
-	COLOR PALETTE
+	COLORS
 **************************************************/
 $purple: #6d67c3;
 $blue: #4586ff;
 $green: #2ac971;
 $red: #e65454;
 $navy: #404969;
+
+$msu-blue-1: #bfd3ec;
+$msu-blue-2: #7fa9d8;
+$msu-blue-3: #417ec5;
+$msu-blue-4: #0953b3;
+
+$light-gray-bg: #f3f3f3;
+$gray-body-text: #333;
+
+
+/**************************************************
+	FONTS
+**************************************************/
+@mixin heading-font {
+	font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+
+@mixin body-font {
+	font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+}
+
+@mixin border-radius($size) {
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+	-ms-border-radius: $size;
+	-o-border-radius: $size;
+	border-radius: $size;
+}

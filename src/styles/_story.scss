@@ -1,5 +1,5 @@
 .story {
-	background-color: #eee;
+	background-color: $light-gray-bg;
 	box-sizing: border-box;
 	padding: 100px 0;
 	z-index: 5;
@@ -17,12 +17,12 @@
 
 .story__header {
 	color: $blue;
-	font-family: 'patua one';
-	font-size: 28px;
+	font-size: 32px;
 	padding: 0 0 20px;
+	@include heading-font;
 }
 
 .story__content {
-	color: #333;
-	font-size: 18px;
+	color: $gray-body-text;
+	font-size: 24px;
 }
