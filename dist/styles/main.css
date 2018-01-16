@@ -1,16 +1,180 @@
-@import url("https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro:400,900");
 /**************************************************
-	COLORS
+	COLORS & VARIABLES
 **************************************************/
 /**************************************************
-	FONTS
+	MIXINS
 **************************************************/
+/**************************************************
+	GLOBAL STYLES
+**************************************************/
+section {
+  position: relative; }
+
+.section-title {
+  display: none; }
+
+.mobile-steam-unit h1, h2, h3, h4, h5.h6 {
+  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased; }
+
+.mobile-steam-unit p {
+  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.button, .product-button {
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 20px 0;
+  padding: 15px 0;
+  max-width: 300px;
+  text-transform: uppercase;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
+  -ms-transition: 250ms;
+  -o-transition: 250ms;
+  transition: 250ms;
+  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-font-smoothing: antialiased; }
+  .button:hover, .product-button:hover {
+    box-shadow: 0px 13px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    letter-spacing: 1px; }
+  .button:active, .product-button:active {
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px); }
+
+/**************************************************
+	MEDIA QUERIED @EXTEND CLASSES
+**************************************************/
+@media (min-width: 1000px) {
+  .header-font-size, .story__header, .product-title, .testimonials__header, .connect__header, .team .heading {
+    font-size: 42px; }
+  .body-font-size, .story__content, .product-description {
+    font-size: 22px; } }
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .header-font-size, .story__header, .product-title, .testimonials__header, .connect__header, .team .heading {
+    font-size: 28px; }
+  .body-font-size, .story__content, .product-description {
+    font-size: 18px; } }
+
+@media (max-width: 767px) {
+  .header-font-size, .story__header, .product-title, .testimonials__header, .connect__header, .team .heading {
+    font-size: 22px; }
+  .body-font-size, .story__content, .product-description {
+    font-size: 16px; } }
+
+.nav {
+  height: 40px;
+  left: 10px;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  z-index: 10;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+  .nav.active {
+    opacity: 1; }
+  .nav:hover {
+    height: 200px; }
+    .nav:hover .nav__links {
+      -webkit-transform: translateY(0px) !important;
+      -moz-transform: translateY(0px) !important;
+      -ms-transform: translateY(0px) !important;
+      -o-transform: translateY(0px) !important;
+      transform: translateY(0px) !important; }
+  .nav .nav__links {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    padding: 0 0 0 10px; }
+    .nav .nav__links .nav__link {
+      background-color: #fff;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      vertical-align: middle; }
+      .nav .nav__links .nav__link a {
+        color: #4586ff;
+        font-weight: 900;
+        text-decoration: none;
+        font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+
+.story {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 100px 0;
+  z-index: 5; }
+
+.story__content,
+.story__header {
+  margin: 0 auto;
+  max-width: 800px; }
+
+.story__header {
+  color: #4586ff;
+  padding: 0 0 20px;
+  text-align: center;
+  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+
+.story__content {
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 50px;
+  padding: 40px;
+  position: relative;
+  text-align: left;
+  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+  .story__content::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: calc(50% - 40px); }
+  .story__content .note::before {
+    content: "\266C";
+    color: #4585ff;
+    font-size: 40px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    top: -30px; }
+
 /**************************************************
 	PRODUCTS - GLOBAL
 **************************************************/
 .products__row {
   display: flex;
-  flex-direction: row;
   margin: 0 auto;
   max-width: 1200px; }
   .products__row .products__col {
@@ -22,103 +186,77 @@
   content: "";
   height: 150%;
   position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
   -webkit-transform: skewY(-6deg);
   -moz-transform: skewY(-6deg);
   -ms-transform: skewY(-6deg);
-  transform: skewY(-6deg);
-  top: 0;
-  width: 100%;
-  z-index: -1; }
+  -o-transform: skewY(-6deg);
+  transform: skewY(-6deg); }
 
 .product-title {
-  color: #fff;
-  font-size: 34px;
+  color: #eee;
   line-height: 2;
   text-align: left;
   font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
 
 .product-description {
-  color: #fff;
-  font-size: 22px;
+  color: #eee;
   line-height: 1.5;
   text-align: left;
   font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+
+.product-button {
+  background-color: #fff; }
 
 /**************************************************
 	PRODUCTS - GIGS
 **************************************************/
 .gigs {
   z-index: 1; }
+  .gigs .gigs__content {
+    max-width: 560px; }
+    .gigs .gigs__content .yt-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden; }
+      .gigs .gigs__content .yt-container iframe,
+      .gigs .gigs__content .yt-container embed,
+      .gigs .gigs__content .yt-container object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+  .gigs .product-button {
+    color: #4586ff; }
 
-.gigs > * {
-  z-index: 1; }
-
-.gigs::before {
+.skew-bg.gigs::before {
   background: #4586ff;
-  background-attachment: fixed;
-  height: 200%;
   top: -20%; }
-
-.gigs::after {
-  background-image: url("../../dist/images/mic.png");
-  background-attachment: fixed;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  width: 100%;
-  overflow: hidden; }
-
-.gigs .gigs__title {
-  position: relative; }
-  .gigs .gigs__title svg {
-    position: absolute;
-    opacity: .3;
-    left: calc(50% - 105px);
-    top: 100px;
-    width: 240px;
-    height: 240px;
-    z-index: -1; }
 
 /**************************************************
 	PRODUCTS - MUSIC
 **************************************************/
 .music {
   z-index: 2; }
+  .music .product-button {
+    color: #2ac971; }
 
-.music::before {
-  background-color: #2ac971;
-  background-attachment: fixed; }
-
-.music::after {
-  background-image: url("../../dist/images/music-bg.png");
-  background-attachment: fixed;
-  height: 70%;
-  position: absolute;
-  top: 15%;
-  z-index: 0;
-  width: 40%;
-  right: 5%;
-  left: 55%;
-  overflow: hidden; }
-
-.music .music__title {
-  position: relative; }
-  .music .music__title svg {
-    position: absolute;
-    opacity: .3;
-    left: calc(50% - 125px);
-    top: 0;
-    width: 250px;
-    z-index: -1; }
+.skew-bg.music::before {
+  background-color: #2ac971; }
 
 /**************************************************
 	PRODUCTS - JINGLES
 **************************************************/
 .jingles {
   z-index: 3; }
+  .jingles .product-button {
+    color: #6d67c3; }
 
-.jingles::before {
+.skew-bg.jingles::before {
   background-color: #6d67c3; }
 
 /**************************************************
@@ -136,22 +274,55 @@
   .products {
     padding: 100px 0; } }
 
+@media (min-width: 768px) {
+  .products__row {
+    align-items: center;
+    flex-direction: row; }
+  .gigs__title,
+  .music__content,
+  .jingles__title {
+    order: 1; }
+  .gigs__content,
+  .music__title,
+  .jingles__content {
+    order: 2; } }
+
+@media (max-width: 767px) {
+  .products__row {
+    flex-direction: column; }
+  .gigs__title,
+  .music__title,
+  .jingles__title {
+    order: 1; }
+  .gigs__content,
+  .music__content,
+  .jingles__content {
+    order: 2; } }
+
 .testimonials {
   background-color: #fff;
   padding: 100px 0;
   z-index: 4; }
 
+.testimonials__header {
+  color: #6d67c3;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 0 40px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+
 .testimonials__row {
   display: flex;
-  flex-direction: row;
-  max-width: 1300px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1300px; }
 
 .testimonial {
   background-color: #f3f3f3;
   box-sizing: border-box;
   flex: 1;
-  margin: 50px;
+  max-width: 330px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -166,29 +337,93 @@
     padding: 0 40px 40px;
     font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
 
-.story {
-  background-color: #f3f3f3;
-  box-sizing: border-box;
-  padding: 100px 0;
-  z-index: 5; }
+@media (min-width: 768px) {
+  .testimonials__row {
+    flex-direction: row; }
+  .testimonial {
+    margin: 50px; } }
 
-.story__content,
-.story__header {
-  margin: 0 auto;
-  max-width: 1000px; }
+@media (max-width: 767px) {
+  .testimonials__row {
+    align-items: center;
+    flex-direction: column; }
+  .testimonial {
+    margin: 30px; } }
 
-.story__content {
-  line-height: 1.5; }
+.connect {
+  overflow: hidden;
+  background-color: #e65454; }
 
-.story__header {
-  color: #4586ff;
-  font-size: 32px;
-  padding: 0 0 20px;
+.connect__header {
+  color: #fff;
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding: 0 0 40px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
 
-.story__content {
-  color: #333;
-  font-size: 24px; }
+.steamfeed {
+  bottom: 0;
+  left: -400px;
+  position: absolute;
+  right: 0px;
+  width: calc(100% + 400px);
+  z-index: 0; }
+
+.steamfeed__row {
+  display: flex;
+  flex-direction: row; }
+
+.steamfeed__img {
+  flex: 1;
+  padding: 5px; }
+  .steamfeed__img img {
+    opacity: .2;
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(1);
+    /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1);
+    /* Microsoft Edge and Firefox 35+ */
+    width: 100%; }
+
+.social__links {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%; }
+  .social__links .social__link {
+    cursor: pointer;
+    flex: 1;
+    margin: 40px;
+    -webkit-transition: 120ms;
+    -moz-transition: 120ms;
+    -ms-transition: 120ms;
+    -o-transition: 120ms;
+    transition: 120ms; }
+    .social__links .social__link:hover {
+      transform: scale(1.1); }
+    .social__links .social__link:active {
+      transform: scale(1.075); }
+    .social__links .social__link svg path {
+      fill: #fff; }
+
+.connect > *:not(.steamfeed) {
+  position: relative;
+  z-index: 1; }
+
+/**************************************************
+	MEDIA QUERIES
+**************************************************/
+@media (min-width: 768px) {
+  .social__links {
+    flex-direction: row; } }
+
+@media (max-width: 767px) {
+  .social__links {
+    align-items: center;
+    flex-direction: column; } }
 
 .team {
   background-color: #fff;
@@ -198,9 +433,8 @@
     z-index: 1; }
   .team .heading {
     color: #4586ff;
-    font-size: 42px;
-    text-align: center;
-    margin: 0 0 50px; }
+    margin: 0 0 50px;
+    text-align: center; }
 
 .team__row {
   text-align: center; }
@@ -208,29 +442,33 @@
     margin: 0 0 60px; }
   .team__row .member {
     background-color: #f3f3f3;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    border-radius: 6px;
     display: inline-block;
     margin: 0 30px;
     padding: 30px 0;
     text-align: center;
     width: 300px;
-    vertical-align: top; }
+    vertical-align: top;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px; }
     .team__row .member .picture {
-      background-image: url("../../dist/images/team.jpg");
+      background-image: url("../../dist/images/steam.jpg");
       background-repeat: no-repeat;
       height: 200px;
       margin: 0 auto 20px;
-      transition: 200ms;
       width: 200px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      -webkit-transition: 150ms;
+      -moz-transition: 150ms;
+      -ms-transition: 150ms;
+      -o-transition: 150ms;
+      transition: 150ms; }
     .team__row .member .details {
       background-color: #eee;
       -webkit-border-radius: 6px;
@@ -273,106 +511,80 @@
     .team__row .member.aaron:hover .picture {
       background-position: 100% 100%; }
 
-.connect {
-  overflow: hidden;
-  background-color: #e65454; }
+.footer {
+  background-color: #eee;
+  background-position: -10px;
+  border-top: 5px solid #e2e2e2; }
 
-.connect::before {
-  background: #6d67c3; }
+.footer__content {
+  align-items: center;
+  display: flex; }
 
-.connect__header {
-  color: #6d67c3;
-  font-size: 22px;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  font-size: 3vw;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 0 40px;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
-
-.social-header {
-  margin-top: 50px;
-  color: #fff; }
-
-.steamfeed {
-  bottom: 0;
-  position: absolute;
-  left: -400px;
-  right: 0px;
-  width: calc(100% + 400px);
-  z-index: 0; }
-
-.steamfeed__row {
-  display: flex;
-  flex-direction: row; }
-
-.steamfeed__img {
-  flex: 1;
-  padding: 5px; }
-  .steamfeed__img img {
-    opacity: .2;
+.footer__logo {
+  width: 200px; }
+  .footer__logo .logo {
+    width: 100%;
+    opacity: .4;
     filter: gray;
     /* IE6-9 */
     -webkit-filter: grayscale(1);
     /* Google Chrome, Safari 6+ & Opera 15+ */
     filter: grayscale(1);
-    /* Microsoft Edge and Firefox 35+ */
-    width: 100%; }
+    /* Microsoft Edge and Firefox 35+ */ }
 
-.social__links {
-  display: flex;
-  flex-direction: row;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto; }
-  .social__links .social__link {
-    flex: 1;
-    margin: 40px;
-    cursor: pointer;
-    transition: 120ms; }
-    .social__links .social__link:hover {
-      transform: scale(1.1); }
-    .social__links .social__link:active {
-      transform: scale(1.075); }
-    .social__links .social__link svg path {
-      fill: #fff; }
-
-.connect > *:not(.steamfeed) {
-  position: relative;
-  z-index: 1; }
-
-/**************************************************
-	MEDIA QUERIES
-**************************************************/
-@media (min-width: 1400px) {
-  .connect {
-    padding: 150px 0; } }
-
-@media (min-width: 1100px) and (max-width: 1399px) {
-  .connect {
-    padding: 130px 0; } }
-
-@media (max-width: 1099px) {
-  .connect {
-    padding: 100px 0; } }
-
-/**************************************************
-	GLOBAL
-**************************************************/
-section {
-  position: relative; }
-
-input {
-  outline: none; }
-
-.section-title {
-  display: none; }
-
-.mobile-steam-unit h1, h2, h3, h4, h5.h6 {
+.footer__links .link-group__header {
+  color: #888;
   font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  -webkit-font-smoothing: antialiased; }
+  text-transform: uppercase; }
 
-.mobile-steam-unit p {
+.footer__links .footer__link {
+  color: #888;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  text-decoration: none;
   font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  -ms-transition: 150ms;
+  -o-transition: 150ms;
+  transition: 150ms; }
+  .footer__links .footer__link:hover {
+    color: #4586ff;
+    transform: translateX(3px); }
+
+.footer__copyright {
+  color: #aaa;
+  margin: 0 auto;
+  max-width: 430px;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 100px 100px 0; }
+    .footer .footer__content {
+      flex-direction: row; }
+    .footer .footer__links {
+      flex: auto;
+      margin: 0 0 0 50px;
+      padding: 0 30px; }
+      .footer .footer__links .footer__link-group {
+        float: left;
+        margin: 0 50px 0 0; }
+    .footer .footer__copyright {
+      padding: 60px 0 20px; } }
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 10vw 10vw 0; }
+    .footer .footer__content {
+      flex-direction: column; }
+    .footer .footer__logo {
+      margin: 0 0 50px; }
+    .footer .footer__links {
+      line-height: 2.5;
+      text-align: center; }
+    .footer .footer__copyright {
+      line-height: 1.5;
+      margin: 0 auto;
+      padding: 20px 0; } }

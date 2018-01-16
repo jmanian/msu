@@ -3,35 +3,21 @@
 	background-color: $red;
 }
 
-.connect::before {
-	background: $purple;
-	// background: -moz-linear-gradient(top, $purple 0%, darken($purple, 20%) 100%);
-	// background: -webkit-linear-gradient(top, $purple 0%,darken($purple, 20%) 100%);
-	// background: linear-gradient(to bottom, $purple 0%,darken($purple, 20%) 100%);
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr='#13121b',GradientType=0 );
-}
-
 .connect__header {
-	color: $purple;
-	font-size: 22px;
+	color: #fff;
+	max-width: 800px;
+	margin: 50px auto 0;
+	padding: 0 0 40px;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
-	font-size: 3vw;
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 0 40px;
 	@include heading-font;
-}
-
-.social-header {
-	margin-top: 50px;
-	color: #fff;
+	@extend .header-font-size;
 }
 
 .steamfeed {
 	bottom: 0;
-	position: absolute;
 	left: -400px;
+	position: absolute;
 	right: 0px;
 	width: calc(100% + 400px);
 	z-index: 0;
@@ -58,16 +44,15 @@
 
 .social__links {
 	display: flex;
-	flex-direction: row;
+	margin: 0 auto;
 	max-width: 1000px;
 	width: 100%;
-	margin: 0 auto;
 	
 	.social__link {
+		cursor: pointer;
 		flex: 1;
 		margin: 40px;
-		cursor: pointer;
-		transition: 120ms;
+		@include transition(120ms);
 
 		&:hover {
 			transform: scale(1.1);
@@ -92,21 +77,34 @@
 /**************************************************
 	MEDIA QUERIES
 **************************************************/
-@media (min-width:1400px) {
-	.connect {
-		padding: 150px 0;
+// @media (min-width: 1200px) {
+// 	.connect {
+// 		padding: 140px 0;
+// 	}
+// }
+
+// @media (min-width: 1000px) and (max-width: 1199px) {
+// 	.connect {
+// 		padding: 95px 0;
+// 	}
+// }
+
+// @media (max-width: 999px) {
+// 	.connect {
+// 		padding: 70px 0;
+// 	}
+// }
+
+
+@media (min-width: 768px) {
+	.social__links {
+		flex-direction: row;
 	}
 }
 
-@media (min-width:1100px) and (max-width:1399px) {
-	.connect {
-		padding: 130px 0;
+@media (max-width: 767px) {
+	.social__links {
+		align-items: center;
+		flex-direction: column;
 	}
 }
-
-@media (max-width:1099px) {
-	.connect {
-		padding: 100px 0;
-	}
-}
-

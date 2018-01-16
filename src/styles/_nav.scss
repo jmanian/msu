@@ -1,0 +1,58 @@
+.nav {
+	height: 40px;
+	left: 10px;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 10px;
+	z-index: 10;
+	@include transition(300ms);
+
+	&.active {
+		opacity: 1;
+	}
+
+	&:hover {
+		height: 200px;
+
+		.nav__links {
+			-webkit-transform: translateY(0px) !important;
+			-moz-transform: translateY(0px) !important;
+			-ms-transform: translateY(0px) !important;
+			-o-transform: translateY(0px) !important;
+			transform: translateY(0px) !important;
+		}
+	}
+
+	// &::before {
+	// 	background-color: #fff;
+	// 	content: url('../../dist/images/favicon.ico');
+	// 	height: 20px;
+	// 	left: 0;
+	// 	right: 0;
+	// 	padding: 2px 4px;
+	// 	position: fixed;
+	// 	z-index: -1;
+	// }
+
+	.nav__links {
+		@include transition(300ms);
+		padding: 0 0 0 10px;
+
+		.nav__link {
+			background-color: #fff;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			vertical-align: middle;
+
+			a {
+				color: $blue;
+				font-weight: 900;
+				text-decoration: none;
+				@include body-font;
+			}
+		}
+
+	}
+}

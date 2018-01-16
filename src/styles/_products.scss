@@ -3,7 +3,6 @@
 **************************************************/
 .products__row {
 	display: flex;
-	flex-direction: row;
 	margin: 0 auto;
 	max-width: 1200px;
 
@@ -18,29 +17,31 @@
 	content: "";
 	height: 150%;
 	position: absolute;
-	-webkit-transform: skewY(-6deg);
-	-moz-transform: skewY(-6deg);
-	-ms-transform: skewY(-6deg);
-	transform: skewY(-6deg);
 	top: 0;
 	width: 100%;
 	z-index: -1;
+	@include transform(skewY(-6deg));
 }
 
 .product-title {
-	color: #fff;
-	font-size: 34px;
+	color: #eee;
 	line-height: 2;
 	text-align: left;
 	@include heading-font;
+	@extend .header-font-size;
 }
 
 .product-description {
-	color: #fff;
-	font-size: 22px;
+	color: #eee;
 	line-height: 1.5;
 	text-align: left;
 	@include body-font;
+	@extend .body-font-size;
+}
+
+.product-button {
+	background-color: #fff;
+	@extend .button;
 }
 
 
@@ -49,107 +50,76 @@
 **************************************************/
 .gigs {
 	z-index: 1;
-}
 
-.gigs > * {
-	z-index: 1;
-}
+	.gigs__content {
+		max-width: 560px;
 
-.gigs::before {
-	background: $blue;
-	// background-image: url('../../dist/images/live-bg.png');
-	background-attachment: fixed;
-	height: 200%;
-	top: -20%;
-}
+		.yt-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
 
-.gigs::after {
-	// content: '';
-	background-image: url('../../dist/images/mic.png');
-	background-attachment: fixed;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	z-index: 0;
-	width: 100%;
-	overflow: hidden;
-}
+			iframe,
+			embed,
+			object {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 
-.gigs .gigs__title {
-	position: relative;
-	svg {
-		position: absolute;
-		opacity: .3;
-		left: calc(50% - 105px);
-		// transform: rotate(-20deg);
-		top: 100px;
-		width: 240px;
-		height: 240px;
-		z-index: -1;
+	.product-button {
+		color: $blue;
+
+		&:hover {
+		}
 	}
 }
 
-// .gigs .product-description {
-// 	background-image: url('../../dist/images/big-mic.png');
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	background-size: contain;
-// }
+.skew-bg.gigs::before {
+	background: $blue;
+	top: -20%;
+}
+
 
 /**************************************************
 	PRODUCTS - MUSIC
 **************************************************/
 .music {
 	z-index: 2;
-}
 
-.music::before {
-	background-color: $green;
-	// background-image: url('../../dist/images/music-bg2.png');
-	background-attachment: fixed;
-}
+	.product-button {
+		color: $green;
 
-.music::after {
-	// content: '';
-	background-image: url('../../dist/images/music-bg.png');
-	background-attachment: fixed;
-	height: 70%;
-	position: absolute;
-	top: 15%;
-	z-index: 0;
-	width: 40%;
-	right: 5%;
-	left: 55%;
-	overflow: hidden;
-}
-
-.music .music__title {
-	position: relative;
-	svg {
-		position: absolute;
-		opacity: .3;
-		left: calc(50% - 125px);
-		top: 0;
-		width: 250px;
-		z-index: -1;
+		&:hover {
+		}
 	}
 }
 
-// .music .product-description {
-// 	background-image: url('../../dist/images/headphones.png');
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	background-size: contain;
-// }
+.skew-bg.music::before {
+	background-color: $green;
+}
+
 
 /**************************************************
 	PRODUCTS - JINGLES
 **************************************************/
 .jingles {
 	z-index: 3;
+	
+	.product-button {
+			color: $purple;
+		
+		&:hover {
+		}
+	}
 }
 
-.jingles::before {
+.skew-bg.jingles::before {
 	background-color: $purple;
 }
 
@@ -172,6 +142,44 @@
 @media (max-width:1099px) {
 	.products {
 		padding: 100px 0;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.products__row {
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.gigs__title,
+	.music__content,
+	.jingles__title {
+		order: 1;
+	}
+
+	.gigs__content,
+	.music__title,
+	.jingles__content {
+		order: 2;
+	}
+}
+
+@media (max-width: 767px) {
+	.products__row {
+		flex-direction: column;
+	}
+
+	.gigs__title,
+	.music__title,
+	.jingles__title {
+		order: 1;
+	}
+
+	.gigs__content,
+	.music__content,
+	.jingles__content {
+		order: 2;
 	}
 }
 

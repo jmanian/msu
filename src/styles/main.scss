@@ -1,40 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro');
-@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro:400,900');
+@import 'global';
+@import 'nav';
+@import 'story';
 @import 'products';
 @import 'testimonials';
-@import 'story';
-@import 'team';
 @import 'connect';
-
-/**************************************************
-	GLOBAL
-**************************************************/
-section {
-	position: relative;
-}
-
-input {
-	outline: none;
-}
-
-.section-title {
-	display: none;
-	// position: absolute;
-	// top: -10px;
-	// left: 20px;
-	// font-family: 'patua one', cursive;
-	// text-transform: uppercase;
-	// background-color: #fff;
-	// color: $blue;
-	// padding: 10px 20px;
-}
-
-.mobile-steam-unit h1,h2,h3,h4,h5.h6 {
-	@include heading-font;
-	-webkit-font-smoothing: antialiased;
-}
-
-.mobile-steam-unit p {
-	@include body-font;
-	-webkit-font-smoothing: antialiased;
-}
+@import 'team';
+@import 'footer';
