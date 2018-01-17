@@ -122,25 +122,57 @@
 
 			&.blueapron {
 				max-width: 200px;
+
+				path { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+				}
 			}
 
 			&.guru {
 				fill: #fff;
 				max-width: 200px;
+
+				g { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					g { fill: rgba(255,255,255, .8); }
+				}
 			}
 
 			&.macys {
 				max-width: 250px;
+
+				path, g { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path, g { fill: rgba(255,255,255, .8); }
+				}
 			}
 
 			&.spacious {
 				fill: #fff;
 				max-width: 200px;
+
+				path { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+				}
 			}
 
 			&.slack {
 				fill: #fff;
 				max-width: 250px;
+
+				path { fill: rgba(0,0,0, .5); }
+				path:nth-child(2) { fill: rgba(0,0,0, 0); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+					path:nth-child(2) { fill: rgba(0,0,0, 0); }
+				}
 			}
 		}
 
@@ -235,57 +267,26 @@
 			&.blueapron {
 				left: 10%;
 				top: 53%;
-
-				path { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-				}
 			}
 
 			&.guru {
 				right: 14%;
 				top: 60%;
-
-				g { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					g { fill: rgba(255,255,255, .8); }
-				}
 			}
 
 			&.macys {
 				right: 15%;
 				top: 20%;
-				path, g { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					path, g { fill: rgba(255,255,255, .8); }
-				}
 			}
 
 			&.spacious {
 				left: 10%;
 				top: 22%;
-
-				path { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-				}
 			}
 
 			&.slack {
 				right: 7%;
 				top: 35%;
-
-				path { fill: rgba(0,0,0, .5); }
-				path:nth-child(2) { fill: rgba(0,0,0, 0); }
-
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-					path:nth-child(2) { fill: rgba(0,0,0, 0); }
-				}
 			}
 		}
 	}

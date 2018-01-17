@@ -266,17 +266,41 @@ section {
       z-index: 10; }
       .jingles .jingles__content .logo.blueapron {
         max-width: 200px; }
+        .jingles .jingles__content .logo.blueapron path {
+          fill: rgba(0, 0, 0, 0.5); }
+        .jingles .jingles__content .logo.blueapron:hover path {
+          fill: rgba(255, 255, 255, 0.8); }
       .jingles .jingles__content .logo.guru {
         fill: #fff;
         max-width: 200px; }
+        .jingles .jingles__content .logo.guru g {
+          fill: rgba(0, 0, 0, 0.5); }
+        .jingles .jingles__content .logo.guru:hover g {
+          fill: rgba(255, 255, 255, 0.8); }
       .jingles .jingles__content .logo.macys {
         max-width: 250px; }
+        .jingles .jingles__content .logo.macys path, .jingles .jingles__content .logo.macys g {
+          fill: rgba(0, 0, 0, 0.5); }
+        .jingles .jingles__content .logo.macys:hover path, .jingles .jingles__content .logo.macys:hover g {
+          fill: rgba(255, 255, 255, 0.8); }
       .jingles .jingles__content .logo.spacious {
         fill: #fff;
         max-width: 200px; }
+        .jingles .jingles__content .logo.spacious path {
+          fill: rgba(0, 0, 0, 0.5); }
+        .jingles .jingles__content .logo.spacious:hover path {
+          fill: rgba(255, 255, 255, 0.8); }
       .jingles .jingles__content .logo.slack {
         fill: #fff;
         max-width: 250px; }
+        .jingles .jingles__content .logo.slack path {
+          fill: rgba(0, 0, 0, 0.5); }
+        .jingles .jingles__content .logo.slack path:nth-child(2) {
+          fill: transparent; }
+        .jingles .jingles__content .logo.slack:hover path {
+          fill: rgba(255, 255, 255, 0.8); }
+        .jingles .jingles__content .logo.slack:hover path:nth-child(2) {
+          fill: transparent; }
 
 .skew-bg.jingles::before {
   background-color: #6d67c3; }
@@ -350,42 +374,18 @@ section {
     .jingles .jingles__content .logo.blueapron {
       left: 10%;
       top: 53%; }
-      .jingles .jingles__content .logo.blueapron path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles .jingles__content .logo.blueapron:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
     .jingles .jingles__content .logo.guru {
       right: 14%;
       top: 60%; }
-      .jingles .jingles__content .logo.guru g {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles .jingles__content .logo.guru:hover g {
-        fill: rgba(255, 255, 255, 0.8); }
     .jingles .jingles__content .logo.macys {
       right: 15%;
       top: 20%; }
-      .jingles .jingles__content .logo.macys path, .jingles .jingles__content .logo.macys g {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles .jingles__content .logo.macys:hover path, .jingles .jingles__content .logo.macys:hover g {
-        fill: rgba(255, 255, 255, 0.8); }
     .jingles .jingles__content .logo.spacious {
       left: 10%;
       top: 22%; }
-      .jingles .jingles__content .logo.spacious path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles .jingles__content .logo.spacious:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
     .jingles .jingles__content .logo.slack {
       right: 7%;
-      top: 35%; }
-      .jingles .jingles__content .logo.slack path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles .jingles__content .logo.slack path:nth-child(2) {
-        fill: transparent; }
-      .jingles .jingles__content .logo.slack:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
-      .jingles .jingles__content .logo.slack:hover path:nth-child(2) {
-        fill: transparent; } }
+      top: 35%; } }
 
 @media (min-width: 960px) and (max-width: 1099px) {
   .jingles .jingles__content .logo {
