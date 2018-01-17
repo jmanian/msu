@@ -52,7 +52,7 @@
 		cursor: pointer;
 		flex: 1;
 		margin: 40px;
-		@include transition(120ms);
+		@include transition(100ms);
 
 		&:hover {
 			transform: scale(1.1);

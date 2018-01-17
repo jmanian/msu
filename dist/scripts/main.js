@@ -35,7 +35,6 @@ var Steam = (function() {
 		});
 
 		setNavValues();
-
 		setYear();
 	}
 
@@ -76,15 +75,6 @@ var Steam = (function() {
 
 	function displayNav() {
 		var yPos = $(window).scrollTop();
-
-		// if(yPos >= nav.top && !nav.visible) {
-		// 	nav.visible = true;
-		// 	$('#nav').addClass('active');
-		// } else if(yPos < nav.top && nav.visible) {
-		// 	nav.visible = false;
-		// 	$('#nav').removeClass('active');
-		// }
-
 
 		switch(true) {
 			case yPos>=nav.top && !nav.visible:

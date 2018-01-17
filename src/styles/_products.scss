@@ -74,9 +74,6 @@
 
 	.product-button {
 		color: $blue;
-
-		&:hover {
-		}
 	}
 }
 
@@ -94,9 +91,6 @@
 
 	.product-button {
 		color: $green;
-
-		&:hover {
-		}
 	}
 }
 
@@ -112,10 +106,44 @@
 	z-index: 3;
 	
 	.product-button {
-			color: $purple;
-		
-		&:hover {
+		color: $purple;
+	}
+
+
+	.jingles__content {
+		box-sizing: border-box;
+		height: 500px;
+		position: relative;
+		width: 500px;
+
+		.logo {
+			position: absolute;
+			z-index: 10;
+
+			&.blueapron {
+				max-width: 200px;
+			}
+
+			&.guru {
+				fill: #fff;
+				max-width: 200px;
+			}
+
+			&.macys {
+				max-width: 250px;
+			}
+
+			&.spacious {
+				fill: #fff;
+				max-width: 200px;
+			}
+
+			&.slack {
+				fill: #fff;
+				max-width: 250px;
+			}
 		}
+
 	}
 }
 
@@ -125,7 +153,7 @@
 
 
 /**************************************************
-	MEDIA QUERIES
+	MEDIA QUERIES – PRODUCTS STRUCTURE
 **************************************************/
 @media (min-width:1400px) {
 	.products {
@@ -146,6 +174,9 @@
 }
 
 
+/**************************************************
+	MEDIA QUERIES – MOBILE/DESKTOP
+**************************************************/
 @media (min-width: 768px) {
 	.products__row {
 		align-items: center;
@@ -180,6 +211,202 @@
 	.music__content,
 	.jingles__content {
 		order: 2;
+	}
+}
+
+
+/**************************************************
+	MEDIA QUERIES – JINGLE LOGOS
+**************************************************/
+@media (min-width: 1100px) {
+	.jingles .jingles__content {
+		.logo {
+			cursor: pointer;
+			@include transition(100ms);
+
+			&:hover {
+				@include transform(scale(1.1));
+			}
+
+			&:active {
+				@include transform(scale(1.07));
+			}
+
+			&.blueapron {
+				left: 10%;
+				top: 53%;
+
+				path { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+				}
+			}
+
+			&.guru {
+				right: 14%;
+				top: 60%;
+
+				g { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					g { fill: rgba(255,255,255, .8); }
+				}
+			}
+
+			&.macys {
+				right: 15%;
+				top: 20%;
+				path, g { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path, g { fill: rgba(255,255,255, .8); }
+				}
+			}
+
+			&.spacious {
+				left: 10%;
+				top: 22%;
+
+				path { fill: rgba(0,0,0, .5); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+				}
+			}
+
+			&.slack {
+				right: 7%;
+				top: 35%;
+
+				path { fill: rgba(0,0,0, .5); }
+				path:nth-child(2) { fill: rgba(0,0,0, 0); }
+
+				&:hover {
+					path { fill: rgba(255,255,255, .8); }
+					path:nth-child(2) { fill: rgba(0,0,0, 0); }
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1099px) {
+	.jingles .jingles__content {
+		.logo {
+			cursor: pointer;
+			@include transition(100ms);
+
+			&:hover {
+				@include transform(scale(1.1));
+			}
+
+			&:active {
+				@include transform(scale(1.07));
+			}
+
+			&.blueapron {
+				left: 4%;
+				top: 53%;
+			}
+
+			&.guru {
+				right: 7%;
+				top: 60%;
+			}
+
+			&.macys {
+				right: 13%;
+				top: 19%;
+			}
+
+			&.spacious {
+				left: 3%;
+				top: 22%;
+			}
+
+			&.slack {
+				right: 5%;
+				top: 35%;
+			}
+		}
+	}
+}
+
+@media (min-width:768px) and (max-width: 959px) {
+	.jingles .jingles__content {
+		.logo {
+
+			&.blueapron {
+				left: 4%;
+				max-width: 150px;
+				top: 53%;
+			}
+
+			&.guru {
+				max-width: 170px;
+				right: 7%;
+				top: 60%;
+			}
+
+			&.macys {
+				max-width: 200px;
+				right: 13%;
+				top: 19%;
+			}
+
+			&.spacious {
+				left: 3%;
+				max-width: 170px;
+				top: 22%;
+			}
+
+			&.slack {
+				max-width: 200px;
+				right: 5%;
+				top: 35%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.jingles .jingles__content {
+		height: 260px;
+		width: 100%;
+
+		.logo {
+
+			&.blueapron {
+				left: 12%;
+				max-width: 150px;
+				top: 53%;
+			}
+
+			&.guru {
+				max-width: 170px;
+				right: 14%;
+				top: 60%;
+			}
+
+			&.macys {
+				max-width: 200px;
+				right: 12%;
+				top: 4%;
+			}
+
+			&.spacious {
+				left: 10%;
+				max-width: 170px;
+				top: 3%;
+			}
+
+			&.slack {
+				max-width: 200px;
+				right: 11%;
+				top: 24%;
+			}
+		}
 	}
 }
 

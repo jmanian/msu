@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Patua+One|Source+Sans+Pro:400,900");
 /**************************************************
 	COLORS & VARIABLES
@@ -145,7 +146,7 @@ section {
   box-sizing: border-box;
   color: #333;
   line-height: 1.5;
-  margin-top: 50px;
+  margin-top: 60px;
   padding: 40px;
   position: relative;
   text-align: left;
@@ -255,12 +256,33 @@ section {
   z-index: 3; }
   .jingles .product-button {
     color: #6d67c3; }
+  .jingles .jingles__content {
+    box-sizing: border-box;
+    height: 500px;
+    position: relative;
+    width: 500px; }
+    .jingles .jingles__content .logo {
+      position: absolute;
+      z-index: 10; }
+      .jingles .jingles__content .logo.blueapron {
+        max-width: 200px; }
+      .jingles .jingles__content .logo.guru {
+        fill: #fff;
+        max-width: 200px; }
+      .jingles .jingles__content .logo.macys {
+        max-width: 250px; }
+      .jingles .jingles__content .logo.spacious {
+        fill: #fff;
+        max-width: 200px; }
+      .jingles .jingles__content .logo.slack {
+        fill: #fff;
+        max-width: 250px; }
 
 .skew-bg.jingles::before {
   background-color: #6d67c3; }
 
 /**************************************************
-	MEDIA QUERIES
+	MEDIA QUERIES – PRODUCTS STRUCTURE
 **************************************************/
 @media (min-width: 1400px) {
   .products {
@@ -274,6 +296,9 @@ section {
   .products {
     padding: 100px 0; } }
 
+/**************************************************
+	MEDIA QUERIES – MOBILE/DESKTOP
+**************************************************/
 @media (min-width: 768px) {
   .products__row {
     align-items: center;
@@ -298,6 +323,152 @@ section {
   .music__content,
   .jingles__content {
     order: 2; } }
+
+/**************************************************
+	MEDIA QUERIES – JINGLE LOGOS
+**************************************************/
+@media (min-width: 1100px) {
+  .jingles .jingles__content .logo {
+    cursor: pointer;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+    transition: 100ms; }
+    .jingles .jingles__content .logo:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+    .jingles .jingles__content .logo:active {
+      -webkit-transform: scale(1.07);
+      -moz-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      -o-transform: scale(1.07);
+      transform: scale(1.07); }
+    .jingles .jingles__content .logo.blueapron {
+      left: 10%;
+      top: 53%; }
+      .jingles .jingles__content .logo.blueapron path {
+        fill: rgba(0, 0, 0, 0.5); }
+      .jingles .jingles__content .logo.blueapron:hover path {
+        fill: rgba(255, 255, 255, 0.8); }
+    .jingles .jingles__content .logo.guru {
+      right: 14%;
+      top: 60%; }
+      .jingles .jingles__content .logo.guru g {
+        fill: rgba(0, 0, 0, 0.5); }
+      .jingles .jingles__content .logo.guru:hover g {
+        fill: rgba(255, 255, 255, 0.8); }
+    .jingles .jingles__content .logo.macys {
+      right: 15%;
+      top: 20%; }
+      .jingles .jingles__content .logo.macys path, .jingles .jingles__content .logo.macys g {
+        fill: rgba(0, 0, 0, 0.5); }
+      .jingles .jingles__content .logo.macys:hover path, .jingles .jingles__content .logo.macys:hover g {
+        fill: rgba(255, 255, 255, 0.8); }
+    .jingles .jingles__content .logo.spacious {
+      left: 10%;
+      top: 22%; }
+      .jingles .jingles__content .logo.spacious path {
+        fill: rgba(0, 0, 0, 0.5); }
+      .jingles .jingles__content .logo.spacious:hover path {
+        fill: rgba(255, 255, 255, 0.8); }
+    .jingles .jingles__content .logo.slack {
+      right: 7%;
+      top: 35%; }
+      .jingles .jingles__content .logo.slack path {
+        fill: rgba(0, 0, 0, 0.5); }
+      .jingles .jingles__content .logo.slack path:nth-child(2) {
+        fill: transparent; }
+      .jingles .jingles__content .logo.slack:hover path {
+        fill: rgba(255, 255, 255, 0.8); }
+      .jingles .jingles__content .logo.slack:hover path:nth-child(2) {
+        fill: transparent; } }
+
+@media (min-width: 960px) and (max-width: 1099px) {
+  .jingles .jingles__content .logo {
+    cursor: pointer;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+    transition: 100ms; }
+    .jingles .jingles__content .logo:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+    .jingles .jingles__content .logo:active {
+      -webkit-transform: scale(1.07);
+      -moz-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      -o-transform: scale(1.07);
+      transform: scale(1.07); }
+    .jingles .jingles__content .logo.blueapron {
+      left: 4%;
+      top: 53%; }
+    .jingles .jingles__content .logo.guru {
+      right: 7%;
+      top: 60%; }
+    .jingles .jingles__content .logo.macys {
+      right: 13%;
+      top: 19%; }
+    .jingles .jingles__content .logo.spacious {
+      left: 3%;
+      top: 22%; }
+    .jingles .jingles__content .logo.slack {
+      right: 5%;
+      top: 35%; } }
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .jingles .jingles__content .logo.blueapron {
+    left: 4%;
+    max-width: 150px;
+    top: 53%; }
+  .jingles .jingles__content .logo.guru {
+    max-width: 170px;
+    right: 7%;
+    top: 60%; }
+  .jingles .jingles__content .logo.macys {
+    max-width: 200px;
+    right: 13%;
+    top: 19%; }
+  .jingles .jingles__content .logo.spacious {
+    left: 3%;
+    max-width: 170px;
+    top: 22%; }
+  .jingles .jingles__content .logo.slack {
+    max-width: 200px;
+    right: 5%;
+    top: 35%; } }
+
+@media (max-width: 767px) {
+  .jingles .jingles__content {
+    height: 260px;
+    width: 100%; }
+    .jingles .jingles__content .logo.blueapron {
+      left: 12%;
+      max-width: 150px;
+      top: 53%; }
+    .jingles .jingles__content .logo.guru {
+      max-width: 170px;
+      right: 14%;
+      top: 60%; }
+    .jingles .jingles__content .logo.macys {
+      max-width: 200px;
+      right: 12%;
+      top: 4%; }
+    .jingles .jingles__content .logo.spacious {
+      left: 10%;
+      max-width: 170px;
+      top: 3%; }
+    .jingles .jingles__content .logo.slack {
+      max-width: 200px;
+      right: 11%;
+      top: 24%; } }
 
 .testimonials {
   background-color: #fff;
@@ -397,11 +568,11 @@ section {
     cursor: pointer;
     flex: 1;
     margin: 40px;
-    -webkit-transition: 120ms;
-    -moz-transition: 120ms;
-    -ms-transition: 120ms;
-    -o-transition: 120ms;
-    transition: 120ms; }
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+    transition: 100ms; }
     .social__links .social__link:hover {
       transform: scale(1.1); }
     .social__links .social__link:active {
@@ -454,7 +625,7 @@ section {
     -o-border-radius: 6px;
     border-radius: 6px; }
     .team__row .member .picture {
-      background-image: url("../../dist/images/steam.jpg");
+      background-image: url("../../dist/assets/steam.jpg");
       background-repeat: no-repeat;
       height: 200px;
       margin: 0 auto 20px;
@@ -532,36 +703,40 @@ section {
     filter: grayscale(1);
     /* Microsoft Edge and Firefox 35+ */ }
 
-.footer__links .link-group__header {
-  color: #888;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  text-transform: uppercase; }
-
-.footer__links .footer__link {
-  color: #888;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1.5;
-  text-decoration: none;
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
-  -webkit-transition: 150ms;
-  -moz-transition: 150ms;
-  -ms-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms; }
-  .footer__links .footer__link:hover {
-    color: #4586ff;
-    transform: translateX(3px); }
+.footer__links {
+  box-sizing: border-box; }
+  .footer__links .link-group__header {
+    color: #888;
+    font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    text-transform: uppercase; }
+  .footer__links .footer__link {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.5;
+    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
 
 .footer__copyright {
-  color: #aaa;
-  margin: 0 auto;
+  color: #888;
   max-width: 430px;
-  text-align: center; }
+  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+  .footer__copyright span:not(#year) {
+    color: #78a7ff; }
+  .footer__copyright a {
+    color: #888;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+    transition: 150ms; }
+    .footer__copyright a:hover {
+      color: #4586ff; }
 
 @media (min-width: 768px) {
   .footer {
-    padding: 100px 100px 0; }
+    padding: 80px; }
     .footer .footer__content {
       flex-direction: row; }
     .footer .footer__links {
@@ -571,12 +746,21 @@ section {
       .footer .footer__links .footer__link-group {
         float: left;
         margin: 0 50px 0 0; }
+      .footer .footer__links .footer__link {
+        -webkit-transition: 150ms;
+        -moz-transition: 150ms;
+        -ms-transition: 150ms;
+        -o-transition: 150ms;
+        transition: 150ms; }
+        .footer .footer__links .footer__link:hover {
+          color: #4586ff;
+          transform: translateX(2px); }
     .footer .footer__copyright {
-      padding: 60px 0 20px; } }
+      text-align: right; } }
 
 @media (max-width: 767px) {
   .footer {
-    padding: 10vw 10vw 0; }
+    padding: 8vw; }
     .footer .footer__content {
       flex-direction: column; }
     .footer .footer__logo {
@@ -587,4 +771,5 @@ section {
     .footer .footer__copyright {
       line-height: 1.5;
       margin: 0 auto;
-      padding: 20px 0; } }
+      padding: 20px 0;
+      text-align: center; } }
