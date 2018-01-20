@@ -213,7 +213,7 @@ function setYear() {
 
 function setScreenData() {
 	screen.height = $(window).height();
-	screen.isSmall = screen.width < 768;
+	screen.isSmall = $(window).width() < 768;
 	screen.width = $(window).width();
 }
 

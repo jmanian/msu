@@ -126,7 +126,8 @@ section {
 
 @media (max-width: 767px) {
 	.header-font-size {
-		font-size: 34px;
+		font-size: 30px;
+		line-height: 1.2;
 	}
 	
 	.body-font-size {
@@ -136,6 +137,10 @@ section {
 	.button {
 		max-width: 100%;
 		margin: 40px auto 20px;
+	}
+
+	.large-screen {
+		display: none;
 	}
 }
 
@@ -180,11 +185,18 @@ section {
 }
 
 @media (max-width: 767px) {
-	.story,
+	.story {
+		padding: 50px 30px;
+	}
+
 	.testimonials,
 	.team,
 	.products {
 		padding: 50px 0;
-	}	
+	}
+
+	.products.gigs {
+		padding: 0 0 50px;
+	}
 }
 
