@@ -187,23 +187,23 @@
 /**************************************************
 	MEDIA QUERIES – PRODUCTS STRUCTURE
 **************************************************/
-@media (min-width:1400px) {
-	.products {
-		padding: 150px 0;
-	}
-}
+// @media (min-width:1400px) {
+// 	.products {
+// 		padding: 150px 0;
+// 	}
+// }
 
-@media (min-width:1100px) and (max-width:1399px) {
-	.products {
-		padding: 130px 0;
-	}
-}
+// @media (min-width:1100px) and (max-width:1399px) {
+// 	.products {
+// 		padding: 120px 0;
+// 	}
+// }
 
-@media (max-width:1099px) {
-	.products {
-		padding: 100px 0;
-	}
-}
+// @media (max-width:1099px) {
+// 	.products {
+// 		padding: 50px 0;
+// 	}
+// }
 
 
 /**************************************************
@@ -213,37 +213,40 @@
 	.products__row {
 		align-items: center;
 		flex-direction: row;
+	
+		.gigs__title,
+		.music__content,
+		.jingles__title {
+			order: 1;
+		}
+
+		.gigs__content,
+		.music__title,
+		.jingles__content {
+			order: 2;
+		}
 	}
 
-	.gigs__title,
-	.music__content,
-	.jingles__title {
-		order: 1;
-	}
-
-	.gigs__content,
-	.music__title,
-	.jingles__content {
-		order: 2;
-	}
 }
 
 @media (max-width: 767px) {
 	.products__row {
 		flex-direction: column;
+	
+		.gigs__title,
+		.music__title,
+		.jingles__title {
+			order: 1;
+			padding-bottom: 0;
+		}
+
+		.gigs__content,
+		.music__content,
+		.jingles__content {
+			order: 2;
+		}
 	}
 
-	.gigs__title,
-	.music__title,
-	.jingles__title {
-		order: 1;
-	}
-
-	.gigs__content,
-	.music__content,
-	.jingles__content {
-		order: 2;
-	}
 }
 
 
@@ -373,41 +376,132 @@
 
 @media (max-width: 767px) {
 	.jingles .jingles__content {
-		height: 260px;
+		height: auto;
+		padding: 40px 40px 0;
 		width: 100%;
+		// margin-top: 35px;
 
 		.logo {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+
+			&:not(:last-child) {
+				margin: 0 auto 40px;
+			}
 
 			&.blueapron {
-				left: 12%;
+				// right: 16%;
 				max-width: 150px;
-				top: 53%;
+				// top: 33%;
 			}
 
 			&.guru {
 				max-width: 170px;
-				right: 14%;
-				top: 60%;
+				// right: 17%;
+				// top: 84%;
 			}
 
 			&.macys {
 				max-width: 200px;
-				right: 12%;
-				top: 4%;
+				// left: 11%;
+				// top: 80%;
 			}
 
 			&.spacious {
-				left: 10%;
+				// left: 15%;
 				max-width: 170px;
-				top: 3%;
+				// top: 27%;
 			}
 
 			&.slack {
 				max-width: 200px;
-				right: 11%;
-				top: 24%;
+				// left: 33%;
+				// top: -9%;
 			}
 		}
 	}
 }
+
+// @media (min-width: 471px) and (max-width: 600px) {
+// 	.jingles .jingles__content {
+// 			height: 260px;
+// 			width: 100%;
+// 			margin-top: 25px;
+
+// 			.logo {
+
+// 				&.blueapron {
+// 					left: 10%;
+// 					max-width: 150px;
+// 					top: 20%;
+// 				}
+
+// 				&.guru {
+// 					max-width: 170px;
+// 					right: 9%;
+// 					top: 64%;
+// 				}
+
+// 				&.macys {
+// 					max-width: 200px;
+// 					right: 10%;
+// 					top: 2%;
+// 				}
+
+// 				&.spacious {
+// 					left: 10%;
+// 					max-width: 170px;
+// 					top: 58%;
+// 				}
+
+// 				&.slack {
+// 					max-width: 200px;
+// 					right: 4%;
+// 					top: 25%;
+// 				}
+// 			}
+// 		}
+// }
+
+// @media (max-width: 470px) {
+// 	.jingles .jingles__content {
+// 		height: 260px;
+// 		width: 100%;
+// 		margin-top: 25px;
+
+// 		.logo {
+
+// 			&.blueapron {
+// 				left: 10%;
+// 				max-width: 140px;
+// 				top: 20%;
+// 			}
+
+// 			&.guru {
+// 				max-width: 160px;
+// 				right: 9%;
+// 				top: 64%;
+// 			}
+
+// 			&.macys {
+// 				max-width: 190px;
+// 				right: 10%;
+// 				top: 2%;
+// 			}
+
+// 			&.spacious {
+// 				left: 10%;
+// 				max-width: 160px;
+// 				top: 58%;
+// 			}
+
+// 			&.slack {
+// 				max-width: 190px;
+// 				right: 4%;
+// 				top: 25%;
+// 			}
+// 		}
+// 	}
+// }
 

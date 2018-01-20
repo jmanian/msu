@@ -1,6 +1,6 @@
 .team {
 	background-color: #fff;
-	padding: 100px 0;
+	// padding: 100px 0;
 
 	& > * {
 		position: relative;
@@ -39,7 +39,6 @@
 			margin: 0 auto 20px;
 			width: 200px;
 			@include border-radius(50%);
-			@include transition(150ms);
 		}
 
 		.details {
@@ -91,5 +90,53 @@
 			.picture { background-position: 100% 0; }
 			&:hover .picture { background-position: 100% 100%;}
 		}
+	}
+}
+
+
+/**************************************************
+	MEDIA QUERIES: TEAM LAYOUT
+**************************************************/
+@media (min-width: 724px) and (max-width: 1087px) {
+	.member{
+		&.aaron {
+			margin-top: 60px;
+		}
+	}
+}
+
+@media (max-width: 723px) {
+	.member {
+		&.aaron,
+		&.dan,
+		&.pat {
+			margin-top: 60px;
+		}
+	}
+}
+
+
+/**************************************************
+	MEDIA QUERIES: TEAM SCROLL EFFECT
+**************************************************/
+@media (min-width: 768px) {
+	.member {
+		.picture {
+			@include transition(150ms);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.member {
+		.picture {
+			@include transition(350ms);
+		}
+
+		&.sam.hovered .picture { background-position: 0 100%; }
+		&.pat.hovered .picture { background-position: 25% 100%; }
+		&.jeff.hovered .picture { background-position: 50% 100%; }
+		&.dan.hovered .picture { background-position: 75% 100%; }
+		&.aaron.hovered .picture { background-position: 100% 100%;}
 	}
 }
