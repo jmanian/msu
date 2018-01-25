@@ -23,6 +23,8 @@ $(window).scroll(function() {
 	} else {
 		initTeamScrollEffect();
 	}
+
+	initBgScrollEffect();
 });
 
 $(window).resize(function() {
@@ -51,12 +53,12 @@ var screen = {
 	height: null,
 	isSmall: false,
 	width: null
-}
+};
 var instagram = {
 	data: null,
 	loaded: false,
 	loading: false
-}
+};
 
 // var nav = {
 // 	visible: false,
@@ -145,7 +147,7 @@ function initTeamScrollEffect() {
 }
 
 function teamTriggerPoint() {
-	return screen.height / 3;
+	return screen.height / 4;
 }
 
 
@@ -206,11 +208,40 @@ function teamTriggerPoint() {
 
 
 /**************************************************
+	BG SCROLL EFFECT
+**************************************************/
+function initBgScrollEffect() {
+	var yPos = $(window).scrollTop();
+	var gigsTop = $('.gigs').offset().top - ($(window).height()/2);
+	var musicTop = $('.music').offset().top - ($(window).height()/2);
+	var jingleTop = $('.jingles').offset().top - ($(window).height()/2);
+	var inGigs = yPos > gigsTop && yPos <= musicTop;
+	var inMusic = yPos > musicTop && yPos <= jingleTop;
+	var inJingles = yPos > jingleTop;
+
+	switch(true) {
+		case inGigs:
+			$('.products').css('background', '#4586ff');
+			$('.products .product-button').css('color', '#4586ff');
+			break;
+		case inMusic:
+			$('.products').css('background', '#2ac971');
+			$('.products .product-button').css('color', '#2ac971');
+			break;
+		case inJingles:
+			$('.products').css('background', '#147F96'); //d57421
+			$('.products .product-button').css('color', '#147F96');
+			break;
+	}
+}
+
+
+/**************************************************
 	HELPER FUNCTIONS
 **************************************************/
 function setYear() {
 	var d = new Date();
-	$('#year').html(d.getFullYear());
+	$('#year').replaceWith(d.getFullYear());
 }
 
 function setScreenData() {

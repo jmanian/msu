@@ -68,9 +68,6 @@ button {
   margin: 0; }
 
 .header {
-  background-color: #111;
-  max-height: 100vh;
-  overflow: hidden;
   position: relative; }
 
 .header__video {
@@ -79,7 +76,6 @@ button {
   z-index: 1; }
 
 .header__overlay {
-  background-color: rgba(0, 0, 0, 0.2);
   bottom: 0;
   left: 0;
   position: absolute;
@@ -90,18 +86,49 @@ button {
 .header__logo {
   background-image: url("dist/assets/logo.png");
   background-size: cover;
-  height: 64px;
-  left: 20px;
   position: absolute;
-  top: 20px;
-  width: 150px;
   z-index: 3; }
 
 .header__message {
   color: #fff;
-  font-size: 7vw;
-  left: 10%;
   position: absolute;
-  text-align: left;
-  top: 50%;
   z-index: 3; }
+
+@media (min-width: 768px) {
+  .header {
+    max-height: 100vh;
+    overflow: hidden; }
+    .header .header__logo {
+      height: 64px;
+      left: 20px;
+      top: 20px;
+      width: 150px; }
+    .header .header__message {
+      font-size: 7vw;
+      left: 10%;
+      text-align: left;
+      top: 50%; }
+    .header .header__overlay {
+      background-color: rgba(0, 0, 0, 0.2); } }
+
+@media (max-width: 767px) {
+  .header {
+    background-image: url("dist/assets/header-image-mobile.jpg");
+    background-size: 100%;
+    padding-top: 100%; }
+    .header .header__video {
+      display: none; }
+    .header .header__logo {
+      left: 10px;
+      height: 42.96px;
+      top: 10px;
+      width: 100px; }
+    .header .header__message {
+      font-size: 8vw;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-shadow: 0px 0px 30px #000;
+      top: calc(50% - 30px); }
+    .header .header__overlay {
+      background-color: rgba(0, 0, 0, 0.3); } }

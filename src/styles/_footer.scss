@@ -1,6 +1,5 @@
 .footer {
 	background-color: #eee;
-	background-position: -10px;
 	border-top: 5px solid #e2e2e2;
 }
 
@@ -24,14 +23,14 @@
 .footer__links {
 	box-sizing: border-box;
 
-	.link-group__header {
-		color: #888;
-		@include heading-font;
-		text-transform: uppercase;
-	}
+	// .link-group__header {
+	// 	color: #888;
+	// 	@include heading-font;
+	// 	text-transform: uppercase;
+	// }
 
 	.footer__link {
-		color: #888;
+		color: #333;
 		cursor: pointer;
 		display: inline-block;
 		line-height: 1.5;
@@ -40,23 +39,27 @@
 
 }
 
-.footer__copyright {
+.footer__extras {
 	color: #888;
 	max-width: 430px;
 	@include body-font;
 
-	span:not(#year) {
-		color: lighten($blue, 10%);
+	.extras__signoff {
+		display: inline-block;
 	}
 
-	a {
-		color: #888;
-		cursor: pointer;
-		text-decoration: none;
-		@include transition(150ms);
+	.extras__copyright {
+		margin-top: 20px;
 
-		&:hover {
-			color: $blue;
+		.mm-link {
+			text-decoration: none;
+
+			.mm-logo {
+				fill: #333;
+				height: 20px;
+				width: 20px;
+				@include transition(150ms);
+			}
 		}
 	}
 }
@@ -90,8 +93,36 @@
 			}
 		}
 
-		.footer__copyright {
+		.footer__extras {
 			text-align: right;
+
+			.extras__signoff {
+			}
+
+			.extras__copyright {
+				height: 30px;
+				line-height: 30px;
+				vertical-align: middle;
+
+				.mm-link {
+					cursor: pointer;
+					display: inline-block;
+					height: 30px;
+					line-height: 30px;
+					text-decoration: none;
+					vertical-align: middle;
+
+					&:hover .mm-logo {
+						fill: $blue;
+						transform: rotate(360deg);
+					}
+
+					.mm-logo {
+						height: 30px;
+						width: 30px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -123,11 +154,27 @@
 			}
 		}
 
-		.footer__copyright {
-			line-height: 1.5;
+		.footer__extras {
+			line-height: 1.4;
 			margin: 0 auto;
 			padding: 20px 0 0;
 			text-align: center;
+
+			.extras__signoff {
+				max-width: 80%;
+			}
+
+			.extras__copyright {
+				.mm-link {
+					display: block;
+					margin: 15px 15px 0;
+
+					.mm-logo {
+						height: 50px;
+						width: 50px;
+					}
+				}
+			}
 		}
 	}
 }

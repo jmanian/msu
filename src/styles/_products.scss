@@ -1,6 +1,11 @@
 /**************************************************
 	PRODUCTS - GLOBAL
 **************************************************/
+.products {
+	background-color: $blue;
+	@include transition(1000ms);
+}
+
 .products__row {
 	display: flex;
 	margin: 0 auto;
@@ -10,6 +15,47 @@
 		flex: 1;
 		padding: 40px;
 		text-align: center;
+		position: relative;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:not(.music__content):first-child::before,
+		&.music__title::before {
+			background-color: rgba(0,0,0, .04);
+			left: 0;
+			right: 40%;
+			top: 0;
+			bottom: 40%;
+			@include transform(skew(0deg));
+			@include border-radius(8px);
+		}
+
+		&:not(.music__title):not(.jingles__content):last-child::after,
+		&.music__content::after {
+			background-color: rgba(255,255,255, .1);
+			bottom: 0;
+			height: 300px;
+			left: 10%;
+			width: 300px;
+			@include transform(skew(0deg));
+			@include border-radius(50%);
+		}
+
+		&.jingles__content::after {
+			background-color: rgba(255,255,255, .04);
+			height: 300px;
+			left: calc(50% - 150px);
+			top: calc(50% - 150px);
+			width: 300px;
+			@include transform(skew(0deg));
+			@include border-radius(50%);
+		}
 	}
 }
 
@@ -72,9 +118,9 @@
 		}
 	}
 
-	.product-button {
-		color: $blue;
-	}
+	// .product-button {
+	// 	color: $blue;
+	// }
 }
 
 .skew-bg.gigs::before {
@@ -89,9 +135,9 @@
 .music {
 	z-index: 2;
 
-	.product-button {
-		color: $green;
-	}
+	// .product-button {
+	// 	color: $green;
+	// }
 }
 
 .skew-bg.music::before {
@@ -105,9 +151,9 @@
 .jingles {
 	z-index: 3;
 	
-	.product-button {
-		color: $purple;
-	}
+	// .product-button {
+	// 	color: $purple;
+	// }
 
 
 	.jingles__content {

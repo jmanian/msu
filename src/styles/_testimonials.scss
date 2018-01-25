@@ -4,7 +4,7 @@
 }
 
 .testimonials__header {
-	color: $purple;
+	color: #00B6CC;
 	margin: 0 auto;
 	max-width: 800px;
 	text-align: center;
@@ -33,7 +33,7 @@
 	}
 
 	.testimonial__name {
-		color: $purple;
+		color: #00B6CC;
 		padding: 0 40px 40px;
 		@include heading-font;
 	}
