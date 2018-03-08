@@ -1,0 +1,109 @@
+.audio,
+.tracks {
+	background-color: rgba(0,0,0, .2);
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+}
+
+.audio {
+	overflow: hidden;
+	padding: 20px;
+
+	.audio__buffer {
+		background-color: rgba(0,0,0,.1);
+		bottom: 0;
+		content: "";
+		position: absolute;
+		top: 0;
+		z-index: 0;
+		@include transition( 100ms );
+		@include transform( translateX(0) );
+	}
+
+	.audio__play {
+		margin: 0 30px;
+	}
+
+	.audio__play,
+	.audio__prev,
+	.audio__next {
+		cursor: pointer;
+		position: relative;
+		width: 40px;
+		@include transition(120ms);
+
+		&:hover {
+			@include transform( scale(1.05) );
+		}
+	}
+}
+
+.tracks {
+}
+
+.track {
+	cursor: pointer;
+	height: 70px;
+	text-align: left;
+
+	&:nth-child(odd) {
+		background-color: rgba(0,0,0, .05);
+	}
+
+	&:hover,
+	&.active {
+		background-color: rgba(0,0,0, .2);
+	}
+
+	.track__title {
+		color: #fff;
+		display: inline-block;
+		line-height: 70px;
+		padding: 0 0 0 30px;
+		@include body-font;
+	}
+
+	.track__logo {
+		width: 80px;
+		float: right;
+		margin: 0 30px 0 0;
+
+		&.track__logo--blueapron {
+			margin-top: 15px;	
+		}
+
+		&.track__logo--guru {
+			margin-top: 26px;	
+		}
+
+		&.track__logo--spacious {
+			margin-top: 13px;	
+		}
+	}
+}
+
+
+@media (min-width: 768px) {
+	.audio,
+	.tracks {
+		width: 400px;
+	}
+
+	.audio__buffer {
+		left: -400px;
+		width: 400px;
+	}
+}
+
+@media (max-width: 767px) {
+	.audio,
+	.tracks {
+		width: 100%;
+	}
+
+	.audio__buffer {
+		left: -100%;
+		width: 100%;
+	}
+}

@@ -117,10 +117,6 @@
 			}
 		}
 	}
-
-	// .product-button {
-	// 	color: $blue;
-	// }
 }
 
 .skew-bg.gigs::before {
@@ -134,10 +130,6 @@
 **************************************************/
 .music {
 	z-index: 2;
-
-	// .product-button {
-	// 	color: $green;
-	// }
 }
 
 .skew-bg.music::before {
@@ -150,80 +142,119 @@
 **************************************************/
 .jingles {
 	z-index: 3;
-	
-	// .product-button {
-	// 	color: $purple;
-	// }
+}
 
 
-	.jingles__content {
-		box-sizing: border-box;
-		height: 500px;
-		position: relative;
-		width: 500px;
+.jingles__content {
+	box-sizing: border-box;
+	height: 500px;
+	position: relative;
+	width: 500px;
 
-		.logo {
-			position: absolute;
-			z-index: 10;
 
-			&.blueapron {
-				max-width: 200px;
+	.logo {
+		position: absolute;
+		z-index: 10;
 
-				path { fill: rgba(0,0,0, .5); }
+		&.blueapron {
+			max-width: 200px;
 
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-				}
-			}
+			path { fill: rgba(0,0,0, .5); }
 
-			&.guru {
-				fill: #fff;
-				max-width: 200px;
-
-				g { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					g { fill: rgba(255,255,255, .8); }
-				}
-			}
-
-			&.macys {
-				max-width: 250px;
-
-				path, g { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					path, g { fill: rgba(255,255,255, .8); }
-				}
-			}
-
-			&.spacious {
-				fill: #fff;
-				max-width: 200px;
-
-				path { fill: rgba(0,0,0, .5); }
-
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-				}
-			}
-
-			&.slack {
-				fill: #fff;
-				max-width: 250px;
-
-				path { fill: rgba(0,0,0, .5); }
-				path:nth-child(2) { fill: rgba(0,0,0, 0); }
-
-				&:hover {
-					path { fill: rgba(255,255,255, .8); }
-					path:nth-child(2) { fill: rgba(0,0,0, 0); }
-				}
+			&:hover {
+				path { fill: rgba(255,255,255, .8); }
 			}
 		}
 
+		&.guru {
+			fill: #fff;
+			max-width: 200px;
+
+			g { fill: rgba(0,0,0, .5); }
+
+			&:hover {
+				g { fill: rgba(255,255,255, .8); }
+			}
+		}
+
+		&.macys {
+			max-width: 250px;
+
+			path, g { fill: rgba(0,0,0, .5); }
+
+			&:hover {
+				path, g { fill: rgba(255,255,255, .8); }
+			}
+		}
+
+		&.spacious {
+			fill: #fff;
+			max-width: 200px;
+
+			path { fill: rgba(0,0,0, .5); }
+
+			&:hover {
+				path { fill: rgba(255,255,255, .8); }
+			}
+		}
+
+		&.slack {
+			fill: #fff;
+			max-width: 250px;
+
+			path { fill: rgba(0,0,0, .5); }
+			path:nth-child(2) { fill: rgba(0,0,0, 0); }
+
+			&:hover {
+				path { fill: rgba(255,255,255, .8); }
+				path:nth-child(2) { fill: rgba(0,0,0, 0); }
+			}
+		}
 	}
+
 }
+
+// .audio {
+// 	bottom: 0;
+// 	box-sizing: border-box;
+// 	display: inline-block;
+// 	left: calc(50% - 130px);
+// 	overflow: hidden;
+// 	padding: 10px 20px;
+// 	position: absolute;
+// 	width: 260px;
+// 	@include border-radius(6px);
+
+// 	&::before {
+// 		background-color: rgba(0,0,0,.1);
+// 		bottom: 0;
+// 		content: "";
+// 		left: -260px;
+// 		position: absolute;
+// 		top: 0;
+// 		width: 260px;
+// 		z-index: 0;
+// 		@include transition( 100ms );
+// 		@include transform( translateX(0) );
+// 	}
+
+// 	.audio__play {
+// 		margin: 0 30px;
+// 	}
+
+// 	.audio__play,
+// 	.audio__prev,
+// 	.audio__next {
+// 		cursor: pointer;
+// 		position: relative;
+// 		width: 40px;
+// 		@include transition(120ms);
+
+// 		&:hover {
+// 			@include transform( scale(1.05) );
+// 		}
+// 	}
+// }
 
 .skew-bg.jingles::before {
 	background-color: $purple;
@@ -270,6 +301,12 @@
 		.music__title,
 		.jingles__content {
 			order: 2;
+		}
+
+		.jingles__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 
@@ -425,7 +462,6 @@
 		height: auto;
 		padding: 40px 40px 0;
 		width: 100%;
-		// margin-top: 35px;
 
 		.logo {
 			display: block;
@@ -437,117 +473,24 @@
 			}
 
 			&.blueapron {
-				// right: 16%;
 				max-width: 150px;
-				// top: 33%;
 			}
 
 			&.guru {
 				max-width: 170px;
-				// right: 17%;
-				// top: 84%;
 			}
 
 			&.macys {
 				max-width: 200px;
-				// left: 11%;
-				// top: 80%;
 			}
 
 			&.spacious {
-				// left: 15%;
 				max-width: 170px;
-				// top: 27%;
 			}
 
 			&.slack {
 				max-width: 200px;
-				// left: 33%;
-				// top: -9%;
 			}
 		}
 	}
 }
-
-// @media (min-width: 471px) and (max-width: 600px) {
-// 	.jingles .jingles__content {
-// 			height: 260px;
-// 			width: 100%;
-// 			margin-top: 25px;
-
-// 			.logo {
-
-// 				&.blueapron {
-// 					left: 10%;
-// 					max-width: 150px;
-// 					top: 20%;
-// 				}
-
-// 				&.guru {
-// 					max-width: 170px;
-// 					right: 9%;
-// 					top: 64%;
-// 				}
-
-// 				&.macys {
-// 					max-width: 200px;
-// 					right: 10%;
-// 					top: 2%;
-// 				}
-
-// 				&.spacious {
-// 					left: 10%;
-// 					max-width: 170px;
-// 					top: 58%;
-// 				}
-
-// 				&.slack {
-// 					max-width: 200px;
-// 					right: 4%;
-// 					top: 25%;
-// 				}
-// 			}
-// 		}
-// }
-
-// @media (max-width: 470px) {
-// 	.jingles .jingles__content {
-// 		height: 260px;
-// 		width: 100%;
-// 		margin-top: 25px;
-
-// 		.logo {
-
-// 			&.blueapron {
-// 				left: 10%;
-// 				max-width: 140px;
-// 				top: 20%;
-// 			}
-
-// 			&.guru {
-// 				max-width: 160px;
-// 				right: 9%;
-// 				top: 64%;
-// 			}
-
-// 			&.macys {
-// 				max-width: 190px;
-// 				right: 10%;
-// 				top: 2%;
-// 			}
-
-// 			&.spacious {
-// 				left: 10%;
-// 				max-width: 160px;
-// 				top: 58%;
-// 			}
-
-// 			&.slack {
-// 				max-width: 190px;
-// 				right: 4%;
-// 				top: 25%;
-// 			}
-// 		}
-// 	}
-// }
-

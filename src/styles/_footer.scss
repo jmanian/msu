@@ -58,7 +58,7 @@
 				fill: #333;
 				height: 20px;
 				width: 20px;
-				@include transition(150ms);
+				@include transition(200ms);
 			}
 		}
 	}
@@ -88,7 +88,7 @@
 
 				&:hover {
 					color: $blue;
-					transform: translateX(2px);
+					@include transform(translateX(2px));
 				}
 			}
 		}
@@ -114,7 +114,7 @@
 
 					&:hover .mm-logo {
 						fill: $blue;
-						transform: rotate(360deg);
+						@include transform(rotate(360deg));
 					}
 
 					.mm-logo {
