@@ -17,9 +17,9 @@ var AudioPlayer = (function() {
 	};
 
 	var tracks = [
-		'dist/assets/audio-test.mp3',
-		'dist/assets/sorry.mp3',
-		'dist/assets/cyberattack.mp3',
+		'dist/assets/blue-apron.mp3',
+		'dist/assets/guru.mp3',
+		'dist/assets/spacious.mp3',
 	];
 
 	function init() {
@@ -54,6 +54,12 @@ var AudioPlayer = (function() {
 		player.addEventListener('play', function() {
 			setBufferPosition();
 			setPlayButtonState();
+		});
+		player.addEventListener('ended', function() {
+			var track = getCurTrack();
+			if(track !== tracks.length-1) {
+				playTrack(track+1);
+			}
 		});
 	}
 

@@ -1,8 +1,26 @@
-var ProductsBackgroundEffect = (function() {
+var ProductsSection = (function() {
 
 	function init() {
 		$(window).scroll(function() {
 			runEffect();
+		});
+
+		registerHandlers();
+	}
+
+	function registerHandlers() {
+		$('.trigger-contact').click(function() {
+			var select = $(this).data('selectval');
+			scrollTo('#contact');
+			$('#request').val(select);
+		});
+	}
+
+	function scrollTo(hash) {
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 800, function(){
+			window.location.hash = hash;
 		});
 	}
 

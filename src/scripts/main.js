@@ -3,7 +3,7 @@ $(document).ready(function() {
 	ScreenData.init();
 	TeamSection.init();
 	InstagramEffect.init();
-	ProductsBackgroundEffect.init();
+	ProductsSection.init();
 	AudioPlayer.init();
 	// Nav.init();
 

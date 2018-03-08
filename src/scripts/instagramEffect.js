@@ -15,12 +15,18 @@ var InstagramEffect = (function() {
 			$(window).scroll(function() {
 				runScrollEffect();
 			});
-
-			$(window).resize(function() {
-				resizeInstagramSection();
-			})
 		}
+
+		$(window).resize(function() {
+			if(ScreenData.isSmall) {
+				$('#connect').css('height', 'auto');
+				$('.connect__content').css('padding', '0');
+			} else {
+				resizeInstagramSection();
+			}
+		})
 	}
+
 
 	function loadInstagram() {
 		instagram.loading = true;

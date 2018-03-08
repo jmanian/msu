@@ -17,9 +17,9 @@ var AudioPlayer = (function() {
 	};
 
 	var tracks = [
-		'dist/assets/audio-test.mp3',
-		'dist/assets/sorry.mp3',
-		'dist/assets/cyberattack.mp3',
+		'dist/assets/blue-apron.mp3',
+		'dist/assets/guru.mp3',
+		'dist/assets/spacious.mp3',
 	];
 
 	function init() {
@@ -54,6 +54,12 @@ var AudioPlayer = (function() {
 		player.addEventListener('play', function() {
 			setBufferPosition();
 			setPlayButtonState();
+		});
+		player.addEventListener('ended', function() {
+			var track = getCurTrack();
+			if(track !== tracks.length-1) {
+				playTrack(track+1);
+			}
 		});
 	}
 
@@ -208,11 +214,29 @@ var Nav = (function() {
 	}
 
 })();
-var ProductsBackgroundEffect = (function() {
+var ProductsSection = (function() {
 
 	function init() {
 		$(window).scroll(function() {
 			runEffect();
+		});
+
+		registerHandlers();
+	}
+
+	function registerHandlers() {
+		$('.trigger-contact').click(function() {
+			var select = $(this).data('selectval');
+			scrollTo('#contact');
+			$('#request').val(select);
+		});
+	}
+
+	function scrollTo(hash) {
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 800, function(){
+			window.location.hash = hash;
 		});
 	}
 
@@ -337,12 +361,18 @@ var InstagramEffect = (function() {
 			$(window).scroll(function() {
 				runScrollEffect();
 			});
-
-			$(window).resize(function() {
-				resizeInstagramSection();
-			})
 		}
+
+		$(window).resize(function() {
+			if(ScreenData.isSmall) {
+				$('#connect').css('height', 'auto');
+				$('.connect__content').css('padding', '0');
+			} else {
+				resizeInstagramSection();
+			}
+		})
 	}
+
 
 	function loadInstagram() {
 		instagram.loading = true;
@@ -414,7 +444,7 @@ $(document).ready(function() {
 	ScreenData.init();
 	TeamSection.init();
 	InstagramEffect.init();
-	ProductsBackgroundEffect.init();
+	ProductsSection.init();
 	AudioPlayer.init();
 	// Nav.init();
 
