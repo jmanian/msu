@@ -72,7 +72,7 @@ section {
 
 @media (min-width: 768px) and (max-width: 999px) {
   .header-font-size, .story__header, .product-title, .testimonials__header, .connect__header, .team .heading {
-    font-size: 28px; }
+    font-size: 34px; }
   .body-font-size, .story__content, .product-description, .testimonial .testimonial__message {
     font-size: 18px; } }
 
@@ -225,6 +225,59 @@ section {
   15% {
     text-shadow: 0px 0px 0px transparent; } }
 
+.nav {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+  .nav.active {
+    opacity: 1; }
+  .nav:hover {
+    height: 160px; }
+    .nav:hover .nav__links {
+      -webkit-transform: translateY(0px) !important;
+      -moz-transform: translateY(0px) !important;
+      -ms-transform: translateY(0px) !important;
+      -o-transform: translateY(0px) !important;
+      transform: translateY(0px) !important; }
+    .nav:hover .nav__link.active {
+      background-color: #eee; }
+    .nav:hover .nav__link:hover {
+      background-color: #eee; }
+  .nav .nav__links {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; }
+    .nav .nav__links .nav__link {
+      background-color: #fff;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      vertical-align: middle;
+      -webkit-transition: 200ms;
+      -moz-transition: 200ms;
+      -ms-transition: 200ms;
+      -o-transition: 200ms;
+      transition: 200ms; }
+      .nav .nav__links .nav__link a {
+        color: #4586ff;
+        display: block;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+
 /**************************************************
 	PRODUCTS - GLOBAL
 **************************************************/
@@ -285,8 +338,8 @@ section {
     .products__row .products__col.jingles__content::after {
       background-color: rgba(255, 255, 255, 0.04);
       height: 300px;
-      left: calc(50% - 150px);
-      top: calc(50% - 150px);
+      left: 50%;
+      top: 50%;
       width: 300px;
       -webkit-transform: skew(0deg);
       -moz-transform: skew(0deg);
@@ -332,21 +385,22 @@ section {
 **************************************************/
 .gigs {
   z-index: 1; }
-  .gigs .gigs__content {
-    max-width: 560px; }
-    .gigs .gigs__content .yt-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden; }
-      .gigs .gigs__content .yt-container iframe,
-      .gigs .gigs__content .yt-container embed,
-      .gigs .gigs__content .yt-container object {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
+
+.gigs__content {
+  max-width: 560px; }
+  .gigs__content .yt-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden; }
+    .gigs__content .yt-container iframe,
+    .gigs__content .yt-container embed,
+    .gigs__content .yt-container object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .skew-bg.gigs::before {
   background: #4586ff;
@@ -372,53 +426,10 @@ section {
   height: 500px;
   position: relative;
   width: 500px; }
-  .jingles__content .logo {
-    position: absolute;
-    z-index: 10; }
-    .jingles__content .logo.blueapron {
-      max-width: 200px; }
-      .jingles__content .logo.blueapron path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles__content .logo.blueapron:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
-    .jingles__content .logo.guru {
-      fill: #fff;
-      max-width: 200px; }
-      .jingles__content .logo.guru g {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles__content .logo.guru:hover g {
-        fill: rgba(255, 255, 255, 0.8); }
-    .jingles__content .logo.macys {
-      max-width: 250px; }
-      .jingles__content .logo.macys path, .jingles__content .logo.macys g {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles__content .logo.macys:hover path, .jingles__content .logo.macys:hover g {
-        fill: rgba(255, 255, 255, 0.8); }
-    .jingles__content .logo.spacious {
-      fill: #fff;
-      max-width: 200px; }
-      .jingles__content .logo.spacious path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles__content .logo.spacious:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
-    .jingles__content .logo.slack {
-      fill: #fff;
-      max-width: 250px; }
-      .jingles__content .logo.slack path {
-        fill: rgba(0, 0, 0, 0.5); }
-      .jingles__content .logo.slack path:nth-child(2) {
-        fill: transparent; }
-      .jingles__content .logo.slack:hover path {
-        fill: rgba(255, 255, 255, 0.8); }
-      .jingles__content .logo.slack:hover path:nth-child(2) {
-        fill: transparent; }
 
 .skew-bg.jingles::before {
   background-color: #6d67c3; }
 
-/**************************************************
-	MEDIA QUERIES – PRODUCTS STRUCTURE
-**************************************************/
 /**************************************************
 	MEDIA QUERIES – MOBILE/DESKTOP
 **************************************************/
@@ -450,126 +461,11 @@ section {
     .products__row .gigs__content,
     .products__row .music__content,
     .products__row .jingles__content {
-      order: 2; } }
-
-/**************************************************
-	MEDIA QUERIES – JINGLE LOGOS
-**************************************************/
-@media (min-width: 1100px) {
-  .jingles .jingles__content .logo {
-    cursor: pointer;
-    -webkit-transition: 100ms;
-    -moz-transition: 100ms;
-    -ms-transition: 100ms;
-    -o-transition: 100ms;
-    transition: 100ms; }
-    .jingles .jingles__content .logo:hover {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
-    .jingles .jingles__content .logo:active {
-      -webkit-transform: scale(1.07);
-      -moz-transform: scale(1.07);
-      -ms-transform: scale(1.07);
-      -o-transform: scale(1.07);
-      transform: scale(1.07); }
-    .jingles .jingles__content .logo.blueapron {
-      left: 10%;
-      top: 53%; }
-    .jingles .jingles__content .logo.guru {
-      right: 14%;
-      top: 60%; }
-    .jingles .jingles__content .logo.macys {
-      right: 15%;
-      top: 20%; }
-    .jingles .jingles__content .logo.spacious {
-      left: 10%;
-      top: 22%; }
-    .jingles .jingles__content .logo.slack {
-      right: 7%;
-      top: 35%; } }
-
-@media (min-width: 960px) and (max-width: 1099px) {
-  .jingles .jingles__content .logo {
-    cursor: pointer;
-    -webkit-transition: 100ms;
-    -moz-transition: 100ms;
-    -ms-transition: 100ms;
-    -o-transition: 100ms;
-    transition: 100ms; }
-    .jingles .jingles__content .logo:hover {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1); }
-    .jingles .jingles__content .logo:active {
-      -webkit-transform: scale(1.07);
-      -moz-transform: scale(1.07);
-      -ms-transform: scale(1.07);
-      -o-transform: scale(1.07);
-      transform: scale(1.07); }
-    .jingles .jingles__content .logo.blueapron {
-      left: 4%;
-      top: 53%; }
-    .jingles .jingles__content .logo.guru {
-      right: 7%;
-      top: 60%; }
-    .jingles .jingles__content .logo.macys {
-      right: 13%;
-      top: 19%; }
-    .jingles .jingles__content .logo.spacious {
-      left: 3%;
-      top: 22%; }
-    .jingles .jingles__content .logo.slack {
-      right: 5%;
-      top: 35%; } }
-
-@media (min-width: 768px) and (max-width: 959px) {
-  .jingles .jingles__content .logo.blueapron {
-    left: 4%;
-    max-width: 150px;
-    top: 53%; }
-  .jingles .jingles__content .logo.guru {
-    max-width: 170px;
-    right: 7%;
-    top: 60%; }
-  .jingles .jingles__content .logo.macys {
-    max-width: 200px;
-    right: 13%;
-    top: 19%; }
-  .jingles .jingles__content .logo.spacious {
-    left: 3%;
-    max-width: 170px;
-    top: 22%; }
-  .jingles .jingles__content .logo.slack {
-    max-width: 200px;
-    right: 5%;
-    top: 35%; } }
-
-@media (max-width: 767px) {
-  .jingles .jingles__content {
-    height: auto;
-    padding: 40px 40px 0;
-    width: 100%; }
-    .jingles .jingles__content .logo {
-      display: block;
-      position: relative;
-      margin: 0 auto; }
-      .jingles .jingles__content .logo:not(:last-child) {
-        margin: 0 auto 40px; }
-      .jingles .jingles__content .logo.blueapron {
-        max-width: 150px; }
-      .jingles .jingles__content .logo.guru {
-        max-width: 170px; }
-      .jingles .jingles__content .logo.macys {
-        max-width: 200px; }
-      .jingles .jingles__content .logo.spacious {
-        max-width: 170px; }
-      .jingles .jingles__content .logo.slack {
-        max-width: 200px; } }
+      order: 2; }
+    .products__row .jingles__content {
+      height: auto;
+      padding: 40px 40px 0;
+      width: 100%; } }
 
 .audio,
 .tracks {
@@ -668,7 +564,7 @@ section {
 .testimonials__header {
   color: #00B6CC;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 860px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
@@ -727,7 +623,7 @@ section {
 **************************************************/
 @media (min-width: 768px) {
   .testimonials .testimonials__header {
-    padding: 0 0 40px; }
+    padding: 0 60px 40px; }
   .testimonials .testimonials__row {
     flex-direction: column; }
   .testimonials .testimonial {

@@ -6,7 +6,7 @@
 .testimonials__header {
 	color: #00B6CC;
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 860px;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
 	@include heading-font;
@@ -71,7 +71,7 @@
 	.testimonials {
 
 		.testimonials__header {
-			padding: 0 0 40px;
+			padding: 0 60px 40px;
 		}
 	
 		.testimonials__row {
@@ -109,27 +109,3 @@
 	}
 }
 
-
-@media (min-width: 1100px) {
-	.testimonials {
-		.testimonial {
-		}
-	}
-}
-
-// @media (min-width: 768px) and (max-width: 1099px) {
-// 	.testimonials {
-
-// 		.testimonials__row {
-// 			margin: 0 30px;
-
-// 			.testimonial:nth-child(2) {
-// 				margin: 0 30px;
-// 			}
-
-// 			.testimonial__message {
-// 				padding: 30px;
-// 			}
-// 		}
-// 	}
-// }

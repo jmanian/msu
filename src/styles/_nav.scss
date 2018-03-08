@@ -1,0 +1,56 @@
+.nav {
+	box-shadow: 5px 5px 10px rgba(0,0,0, .2);
+	height: 40px;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	z-index: 10;
+	@include transition(300ms);
+
+	&.active{
+		opacity: 1;
+	}
+
+	&:hover {
+		height: 160px;
+
+		.nav__links {
+			@include transform( translateY(0px) !important );
+		}
+		
+		.nav__link {
+			&.active {
+				background-color: #eee;
+			}
+			
+			&:hover {
+				background-color: #eee;
+			}
+		}
+	}
+
+	.nav__links {
+		@include transition(300ms);
+
+		.nav__link {
+			background-color: #fff;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			vertical-align: middle;
+			@include transition(200ms);
+
+			a {
+				color: $blue;
+				display: block;
+				font-weight: 900;
+				text-transform: uppercase;
+				text-decoration: none;
+				@include body-font;
+			}
+		}
+
+	}
+}

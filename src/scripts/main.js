@@ -5,6 +5,7 @@ $(document).ready(function() {
 	InstagramEffect.init();
 	ProductsBackgroundEffect.init();
 	AudioPlayer.init();
+	// Nav.init();
 
 	//copyright year
 	$('#year').replaceWith(new Date().getFullYear());
