@@ -1,4 +1,4 @@
-var InstagramEffect = (function() {
+var ConnectSection = (function() {
 
 	var instagram = {
 		data: null,
@@ -22,7 +22,11 @@ var InstagramEffect = (function() {
 				$('#connect').css('height', 'auto');
 				$('.connect__content').css('padding', '0');
 			} else {
-				resizeInstagramSection();
+				if(!instagram.loaded && !instagram.loading) {
+					loadInstagram();
+				} else {
+					resizeInstagramSection();
+				}
 			}
 		})
 	}

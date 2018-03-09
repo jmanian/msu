@@ -115,7 +115,7 @@ button {
   z-index: 2; }
 
 .header__logo {
-  background-image: url("dist/assets/logo.png");
+  background-image: url("/dist/assets/logo.png");
   background-size: cover;
   position: absolute;
   z-index: 3; }
@@ -229,7 +229,7 @@ button {
 					<h2 class="product-title">Music for Business</h2>
 					<div class="bar"></div>
 					<p class="product-description">The lynchpin of our growth model, Mobile Steam Unit's Music for Business is a patent-pending product development strategy that excavates and enshrines your company's true self through the power of song. Our music empowers companies to rediscover their mission, strengthen bonds between colleagues, and build extraordinary culture. You're just a click away from having your song started today!</p>
-					<div class="product-button trigger-contact" data-selectval="Music for Business">make me a song</div>
+					<div class="product-button trigger-contact" data-selectval="Theme Song">make me a song</div>
 				</div>
 
 				<div class="products__col jingles__content">
@@ -331,30 +331,30 @@ button {
 			<div class="testimonials__row">
 				<div class="testimonial">
 					<p class="testimonial__message">THEY WERE AWESOME!! Thank you thank you so much again for all your help here. The guys and their music were just the perfect set up for the event. Hope to work with them in the future again.</p>
-					<p class="testimonial__name">
-						Alexandra Schild
-						<br><span class="testimonial__company">DLD</span>, Job title
+					<div class="testimonial__icon testimonial__icon--alex"></div>
+					<div class="testimonial__name">
+						Alexandra Schiel
+						<br><span class="testimonial__company">DLD</span>, Head of Operations & Program
 						<br><span class="testimonial__type">Live Performance</span>
-					</p>
-					<div class="testimonial__icon"></div>
+					</div>
 				</div>
 				<div class="testimonial">
 					<p class="testimonial__message">The team loves it! Already sending it out to customers etc. :)</p>
-					<p class="testimonial__name">
+					<div class="testimonial__icon testimonial__icon--rick"></div>
+					<div class="testimonial__name">
 						Rick Nucci
-						<br><span class="testimonial__company">GURU</span>, Job title
-						<br><span class="testimonial__type">Corporate Jingle</span>
-					</p>
-					<div class="testimonial__icon"></div>
+						<br><span class="testimonial__company">GURU</span>, Cofounder & CEO
+						<br><span class="testimonial__type">Theme Song</span>
+					</div>
 				</div>
 				<div class="testimonial">
-					<p class="testimonial__message">Donut simply could not exist without this song. Our mission is to improve company culture at the global scale: to strengthen employee bonds, to create a supportive and inclusive onboarding experience. And that's <span class="italic">exactly</span> what our theme song does for our employees here at Donut: it creates bonds, pushes us to cohere around our mission–<span class="bold">it strengthens our culture</span>. If I could do one thing for each and every one of our customers it would be to gift them a theme song.</p>
-					<p class="testimonial__name">
+					<p class="testimonial__message">Donut simply could not exist without this song. Our mission is to improve company culture at the global scale: to strengthen employee bonds, to create a supportive and inclusive onboarding experience. And that's <span class="italic">exactly</span> what our theme song does for our employees here at Donut: it creates bonds, pushes us to cohere around our mission–<span class="bold">it strengthens our culture</span>.</p>
+					<div class="testimonial__icon testimonial__icon--dan"></div>
+					<div class="testimonial__name">
 						Dan Manian
-						<br><span class="testimonial__company">Donut</span>, Founder & CEO
-						<br><span class="testimonial__type">Corporate Jingle</span>
-					</p>
-					<div class="testimonial__icon"></div>
+						<br><span class="testimonial__company">Donut</span>, Cofounder & CEO
+						<br><span class="testimonial__type">Theme song</span>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -445,15 +445,15 @@ button {
 					<p class="contact__detail contact__detail--top">mobilesteamunit@gmail.com</p>
 					<p class="contact__detail contact__detail--bot">555-123-4567</p>
 				</div>
-				<form action="https://formspree.io/mobilesteamunit@gmail.com" method="POST" class="contact__form">
+				<form action="https://formspree.io/mobilesteamunit@gmail.com" id="contact-form" method="POST" class="contact__form">
 					<h1 class="form__heading">Say Hello!</h1>
 					<input type="text" id="name" name="name" class="form__element form__input" placeholder="Your Name">
 					<input type="email" id="email" name="_replyto" class="form__element form__input"  placeholder="Your Email">
 					<select name="request" id="request" default="General Inquiry" class="form__element form__select">
-						<option value="" selected disabled hidden>What's this about?</option> 
-						<option value="General">General Inquiry</option>
-						<option value="Live Performance">Live Performance</option>
-						<option value="Music for Business">Music for Business</option>
+						<!-- <option value="" selected disabled hidden>What's this about?</option>  -->
+						<option value="Live Performance" selected>Live Performance Booking</option>
+						<option value="Theme Song">Theme Song Inquiry</option>
+						<option value="Other">Other</option>
 					</select>
 					<textarea name="message" id="message" class="form__element form__input form__message" rows="6"  placeholder="Your Message..."></textarea>
 					<button type="submit" class="form__submit">Send Message</button>

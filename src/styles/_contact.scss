@@ -17,7 +17,6 @@
 		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
-		padding: 0 40px;
 		position: relative;
 	}
 }
@@ -60,7 +59,6 @@
 	border-radius: 6px;
 	max-width: 400px;
 	overflow: hidden;
-	padding: 80px 25px;
 	position: relative;
 	width: 100%;
 
@@ -156,10 +154,15 @@
 	.contact {
 		.contact__content {
 			flex-direction: row;
+			padding: 0 40px;
 		}
 
 		.contact__details {
 			margin: 7%;
+		}
+
+		.contact__form {
+			padding: 80px 25px;
 		}
 	}
 }
@@ -168,6 +171,7 @@
 	.contact {
 		.contact__content {
 			flex-direction: column;
+			padding: 0 20px;
 		}
 
 		.contact__details {
@@ -177,6 +181,7 @@
 		.contact__form {
 			box-sizing: border-box;
 			margin: 0 0 60px;
+			padding: 80px 20px;
 		}
 	}
 }

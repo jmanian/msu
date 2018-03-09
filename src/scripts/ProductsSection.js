@@ -11,17 +11,15 @@ var ProductsSection = (function() {
 	function registerHandlers() {
 		$('.trigger-contact').click(function() {
 			var select = $(this).data('selectval');
-			scrollTo('#contact');
+			scrollToForm();
 			$('#request').val(select);
 		});
 	}
 
-	function scrollTo(hash) {
+	function scrollToForm(hash) {
 		$('html, body').animate({
-			scrollTop: $(hash).offset().top
-		}, 800, function(){
-			window.location.hash = hash;
-		});
+			scrollTop: $('#contact-form').offset().top - 50
+		}, 800);
 	}
 
 	function runEffect() {

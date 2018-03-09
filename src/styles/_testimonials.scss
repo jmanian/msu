@@ -4,7 +4,7 @@
 }
 
 .testimonials__header {
-	color: #00B6CC;
+	color: $testimonial-green;
 	margin: 0 auto;
 	max-width: 860px;
 	text-align: center;
@@ -25,8 +25,8 @@
 	margin: 30px auto;
 
 	.testimonial__message {
-		background-color: $light-gray-bg;
-		color: $gray-body-text;
+		background-color: #daf5f7;
+		color: #222;
 		line-height: 1.3;
 		padding: 25px;
 		position: relative;
@@ -34,8 +34,8 @@
 		@extend .body-font-size;
 
 		&::before {
-			background-color: $light-gray-bg;
-			bottom: -5px;
+			background-color: #daf5f7;
+			bottom: -10px;
 			content: "";
 			height: 20px;
 			left: 35px;
@@ -46,15 +46,43 @@
 		}
 	}
 
+	.testimonial__icon,
 	.testimonial__name {
+		display: inline-block;
+	}
+
+	.testimonial__icon {
+		background-image: url('/dist/assets/testimonial-sprite.jpg');
+		background-size: cover;
+		border: 4px solid $testimonial-green;
+		height: 80px;
+		margin-top: 25px;
+		width: 80px;
+		@include border-radius(50%);
+	}
+
+	.testimonial__icon--alex {
+		background-position: 320px 0;
+	}
+
+	.testimonial__icon--rick {
+		background-position: 0 0;
+	}
+
+	.testimonial__icon--dan {
+		background-position: 160px 0;
+	}
+
+	.testimonial__name {
+		box-sizing: border-box;
 		color: #222;
-		font-size: 18px;
-		line-height: 1.3;
-		padding: 10px 25px 0;
+		padding: 0 15px 0;
+		vertical-align: top;
+		@include body-font;
 	}
 
 	.testimonial__company {
-		color: #00B6CC;
+		color: $testimonial-green;
 		font-weight: bold;
 	}
 
@@ -82,6 +110,12 @@
 			width: 100%;
 			max-width: 708px;
 		}
+
+		.testimonial__name {
+			font-size: 18px;
+			line-height: 1.3;
+			margin-top: 35px;
+		}
 	}
 }
 
@@ -104,6 +138,13 @@
 			&:last-child {
 				margin: 0;
 			}
+		}
+
+		.testimonial__name {
+			font-size: 16px;
+			line-height: 1.2;
+			margin-top: 45px;
+			width: calc(100% - 95px);
 		}
 
 	}
