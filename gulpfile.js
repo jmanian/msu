@@ -82,6 +82,15 @@ gulp.task('inline-css', ['styles'], function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('minify-inline-css', ['minify-styles'], function() {
+  gulp.src('./index.html')
+    .pipe(replace(/<style data-inject="critical">.[\s\S]*<\/style>/, function() {
+      var styles = fs.readFileSync('dist/styles/critical.css');
+      return '<style data-inject="critical">'+styles+'</style>';
+    }))
+    .pipe(gulp.dest('./'))
+});
+
 gulp.task('scripts', function(){
   gulp.src('src/scripts/**/*.js')
     .pipe(plumber({
@@ -116,4 +125,4 @@ gulp.task('default', ['scripts', 'assets', 'styles', 'inline-css', 'browser-sync
   gulp.watch("*.html", ['bs-reload']);
 });
 
-gulp.task('minify', ['mininfy-styles', 'minify-scripts', 'inline-css']);
+gulp.task('minify', ['minify-styles', 'minify-scripts', 'minify-inline-css']);
