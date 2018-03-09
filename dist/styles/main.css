@@ -13,11 +13,11 @@ section {
   position: relative; }
 
 .mobile-steam-unit h1, h2, h3, h4, h5.h6 {
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Patua One', Verdana, sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 .mobile-steam-unit p {
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 .button, .product-button {
@@ -36,7 +36,7 @@ section {
   -ms-transition: 175ms;
   -o-transition: 175ms;
   transition: 175ms;
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -158,7 +158,7 @@ section {
   color: #4586ff;
   padding: 0 0 20px;
   text-align: center;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Patua One', Verdana, sans-serif; }
 
 .story__content {
   background-color: #f3f3f3;
@@ -170,7 +170,7 @@ section {
   padding: 40px;
   position: relative;
   text-align: left;
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .story__content::before {
     content: "";
     width: 80px;
@@ -316,13 +316,13 @@ section {
   color: #eee;
   line-height: 2;
   text-align: left;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Patua One', Verdana, sans-serif; }
 
 .product-description {
   color: #eee;
   line-height: 1.5;
   text-align: left;
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
 
 .product-button {
   background-color: #fff; }
@@ -477,7 +477,7 @@ section {
     display: inline-block;
     line-height: 70px;
     padding: 0 0 0 30px;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .track .track__logo {
     width: 80px;
     float: right;
@@ -515,7 +515,7 @@ section {
   max-width: 860px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Patua One', Verdana, sans-serif; }
 
 .testimonials__row {
   display: flex;
@@ -581,7 +581,7 @@ section {
     color: #222;
     padding: 0 15px 0;
     vertical-align: top;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .testimonial .testimonial__company {
     color: #00B6CC;
     font-weight: bold; }
@@ -629,7 +629,7 @@ section {
     color: #fff;
     padding: 60px 0;
     text-align: center;
-    font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+    font-family: 'Patua One', Verdana, sans-serif; }
   .contact .contact__content {
     align-items: center;
     box-sizing: border-box;
@@ -674,7 +674,7 @@ section {
     padding: 20px 25px;
     position: absolute;
     top: 0;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .contact__form .form__element {
     border: 2px solid #ddd;
     box-sizing: border-box;
@@ -687,7 +687,7 @@ section {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
     .contact__form .form__element:not(.form__message) {
       margin: 0 0 15px; }
   .contact__form .form__input {
@@ -700,7 +700,7 @@ section {
     display: block;
     margin: 10px 5px 2px;
     text-transform: uppercase;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .contact__form .form__select {
     height: 40px;
     padding: 0; }
@@ -720,7 +720,7 @@ section {
     right: 0;
     text-transform: uppercase;
     width: 100%;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
     .contact__form .form__submit:hover {
       background-color: #37d57e; }
 
@@ -753,7 +753,7 @@ section {
   max-width: 800px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Patua One', Verdana, sans-serif; }
 
 .steamfeed {
   bottom: 0;
@@ -882,15 +882,15 @@ section {
       font-size: 30px;
       padding: 0 0 5px;
       -webkit-font-smoothing: antialiased;
-      font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+      font-family: 'Patua One', Verdana, sans-serif; }
     .team__row .member .title {
       color: #333;
       font-size: 18px;
       padding: 0 0 10px;
       -webkit-font-smoothing: antialiased;
-      font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
     .team__row .member .quote {
-      font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+      font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
     .team__row .member.sam .picture {
       background-position: 0 0; }
     .team__row .member.sam:hover .picture {
@@ -989,7 +989,7 @@ section {
   margin: 15px auto 0;
   max-width: 400px; }
   .alt-footer__copyright span {
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
   .alt-footer__copyright .mm-link {
     display: block;
     margin: 10px auto 0;
