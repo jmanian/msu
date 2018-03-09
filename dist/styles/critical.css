@@ -84,7 +84,7 @@ button {
   z-index: 2; }
 
 .header__logo {
-  background-image: url("/dist/assets/logo.png");
+  background-image: url("dist/assets/logo.png");
   background-size: cover;
   position: absolute;
   z-index: 3; }

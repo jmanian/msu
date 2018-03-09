@@ -27,7 +27,33 @@
 -->
 
 		<title>Mobile Steam Unit: we make business music</title>
+
+
+		<noscript id="deferred-styles">
 		<link rel="stylesheet" href="dist/styles/main.css">
+		</noscript>
+		<script>
+			var loadDeferredStyles = function() {
+				var addStylesNode = document.getElementById("deferred-styles");
+				var replacement = document.createElement("div");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.appendChild(replacement);
+				addStylesNode.parentElement.removeChild(addStylesNode);
+			};
+
+			var raf = window.requestAnimationFrame 
+				|| window.mozRequestAnimationFrame 
+				|| window.webkitRequestAnimationFrame 
+				|| window.msRequestAnimationFrame;
+
+			if(raf) {
+				raf(function() { 
+					window.setTimeout(loadDeferredStyles, 0); 
+				});
+			} else {
+				window.addEventListener('load', loadDeferredStyles);
+			}
+		</script>
 
 		<style data-inject="critical">/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -115,7 +141,7 @@ button {
   z-index: 2; }
 
 .header__logo {
-  background-image: url("/dist/assets/logo.png");
+  background-image: url("dist/assets/logo.png");
   background-size: cover;
   position: absolute;
   z-index: 3; }
@@ -462,52 +488,6 @@ button {
 				</form>
 			</div>
 		</section>
-
-		<!-- <footer class="footer">
-			<div class="footer__content">
-				<div class="footer__logo">
-					<img class="logo" src="dist/assets/dark-logo.png" alt="" />
-				</div>
-				<div class="footer__links">
-					<div class="footer__link-group">
-						<div>
-							<a class="footer__link" href="https://instagram.com/mobilesteamunit" target="_blank">Instagram</a>
-						</div>
-						<div>
-							<a class="footer__link" href="https://facebook.com/mobilesteamunit" target="_blank">Facebook</a>
-						</div>
-						<div>
-							<a class="footer__link" href="https://open.spotify.com/artist/3xVedvLKolMTZUR3iVZThb" target="_blank">Spotify</a>
-						</div>
-					</div>
-
-					<div class="footer__link-group">
-						<div>
-							<a class="footer__link" href="https://mobilesteamunit.bandcamp.com" target="_blank">Bandcamp</a>
-						</div>
-						<div>
-							<a class="footer__link" href="https://www.youtube.com/channel/UCbmHku8IgScIWvS85YUCcCQ" target="_blank">Youtube</a>
-						</div>
-						<div>
-							<a class="footer__link" href="https://www.linkedin.com/company/mobile-steam-unit" target="_blank">LinkedIn</a>
-						</div>
-					</div>
-				</div>
-				<div class="footer__extras">
-					<span class="extras__signoff">We're making music our business by making music for business. Mobile Steam Unit: we make business music.</span>
-					<div class="extras__copyright">
-						<span>&#169;&nbsp;<span id="year"></span></span>
-						<br>
-						<a class="mm-link" target="_blank" href="http://maxmiracolo.com">
-							<svg class="mm-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-								<path d="M48.9 79.3c-.1-.4-.5-8.2-.8-17.3l-.6-16.5-2.3 8.9c-1.2 4.8-3.2 11-4.3 13.7-1.9 4.3-2.5 4.9-5 4.9-3.8 0-4.6-2.2-6.6-16.5C27.6 43.3 27.2 41.9 26 44c-.9 1.7-7.7 28.2-8.2 32-.4 3-3.5 3.4-5.2.7-.9-1.3-.1-5.7 3.5-20C21.6 35.4 24.9 27 27.9 27s3.6 2 6.2 18.8c1.3 8.4 2.6 14.7 3 14 .4-.7 2.1-7.1 3.8-14.3C45.7 25.7 46.7 23 49.5 23c1.2 0 2.6.7 2.9 1.6s.9 7.7 1.3 15.2l.6 13.6L57 45c3.4-10.9 4.8-13.2 8-12.8 3.1.4 3.8 2.8 3.9 14.7.1 5.2.4 9.2.7 8.8.3-.3 1.6-5.4 2.9-11.4 2.5-11.9 5.8-21.5 8-23.3.8-.6 2.4-1 3.7-.8l2.3.3v56l-2.2.3c-1.3.2-2.5-.4-3.1-1.5-.5-1-.9-9.8-.8-19.5 0-9.7 0-17.5-.2-17.3-.1.1-1.4 6-2.7 13.1-3 15.7-4.1 19.1-6.4 20.4-4 2.1-6.6-3.3-7.9-16l-.8-7.5L59.7 59c-5.7 21.9-5.2 20.5-8.1 20.8-1.4.2-2.7 0-2.7-.5z"/>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer> -->
-
 
 		<div class="alt-footer">
 			<div class="social__links">

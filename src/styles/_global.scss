@@ -21,11 +21,11 @@ $gray-body-text: #333;
 	MIXINS
 **************************************************/
 @mixin heading-font {
-	font-family: 'Patua One', Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	font-family: 'Patua One', Verdana, sans-serif;
 }
 
 @mixin body-font {
-	font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
 @mixin border-radius($size) {

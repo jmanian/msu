@@ -559,7 +559,7 @@ section {
   .testimonial .testimonial__name {
     display: inline-block; }
   .testimonial .testimonial__icon {
-    background-image: url("/dist/assets/testimonial-sprite.jpg");
+    background-image: url("dist/assets/testimonial-sprite.jpg");
     background-size: cover;
     border: 4px solid #00B6CC;
     height: 80px;
@@ -951,134 +951,6 @@ section {
     background-position: 75% 100%; }
   .member.aaron.hovered .picture {
     background-position: 100% 100%; } }
-
-.footer {
-  background-color: #eee;
-  border-top: 5px solid #e2e2e2; }
-
-.footer__content {
-  align-items: center;
-  display: flex; }
-
-.footer__logo {
-  width: 200px; }
-  .footer__logo .logo {
-    width: 100%;
-    opacity: .4;
-    filter: gray;
-    /* IE6-9 */
-    -webkit-filter: grayscale(1);
-    /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: grayscale(1);
-    /* Microsoft Edge and Firefox 35+ */ }
-
-.footer__links {
-  box-sizing: border-box; }
-  .footer__links .footer__link {
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1.5;
-    font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
-
-.footer__extras {
-  color: #888;
-  max-width: 430px;
-  font-family: 'Source Sans Pro', Helvetica, Verdana, Arial, sans-serif; }
-  .footer__extras .extras__signoff {
-    display: inline-block; }
-  .footer__extras .extras__copyright {
-    margin-top: 20px; }
-    .footer__extras .extras__copyright .mm-link {
-      text-decoration: none; }
-      .footer__extras .extras__copyright .mm-link .mm-logo {
-        fill: #333;
-        height: 20px;
-        width: 20px;
-        -webkit-transition: 200ms;
-        -moz-transition: 200ms;
-        -ms-transition: 200ms;
-        -o-transition: 200ms;
-        transition: 200ms; }
-
-@media (min-width: 768px) {
-  .footer {
-    padding: 80px; }
-    .footer .footer__content {
-      flex-direction: row; }
-    .footer .footer__links {
-      flex: auto;
-      margin: 0 0 0 50px;
-      padding: 0 30px; }
-      .footer .footer__links .footer__link-group {
-        float: left;
-        margin: 0 50px 0 0; }
-      .footer .footer__links .footer__link {
-        -webkit-transition: 150ms;
-        -moz-transition: 150ms;
-        -ms-transition: 150ms;
-        -o-transition: 150ms;
-        transition: 150ms; }
-        .footer .footer__links .footer__link:hover {
-          color: #4586ff;
-          -webkit-transform: translateX(2px);
-          -moz-transform: translateX(2px);
-          -ms-transform: translateX(2px);
-          -o-transform: translateX(2px);
-          transform: translateX(2px); }
-    .footer .footer__extras {
-      text-align: right; }
-      .footer .footer__extras .extras__copyright {
-        height: 30px;
-        line-height: 30px;
-        vertical-align: middle; }
-        .footer .footer__extras .extras__copyright .mm-link {
-          cursor: pointer;
-          display: inline-block;
-          height: 30px;
-          line-height: 30px;
-          text-decoration: none;
-          vertical-align: middle; }
-          .footer .footer__extras .extras__copyright .mm-link:hover .mm-logo {
-            fill: #4586ff;
-            -webkit-transform: rotate(360deg);
-            -moz-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-            -o-transform: rotate(360deg);
-            transform: rotate(360deg); }
-          .footer .footer__extras .extras__copyright .mm-link .mm-logo {
-            height: 30px;
-            width: 30px; } }
-
-@media (max-width: 767px) {
-  .footer {
-    padding: 30px; }
-    .footer .footer__content {
-      flex-direction: column; }
-    .footer .footer__logo {
-      margin: 0 0 25px; }
-    .footer .footer__links {
-      display: flex;
-      flex-direction: row;
-      width: 100%; }
-      .footer .footer__links .footer__link-group {
-        flex: auto;
-        text-align: center; }
-        .footer .footer__links .footer__link-group .footer__link {
-          line-height: 2.5; }
-    .footer .footer__extras {
-      line-height: 1.4;
-      margin: 0 auto;
-      padding: 20px 0 0;
-      text-align: center; }
-      .footer .footer__extras .extras__signoff {
-        max-width: 80%; }
-      .footer .footer__extras .extras__copyright .mm-link {
-        display: block;
-        margin: 15px 15px 0; }
-        .footer .footer__extras .extras__copyright .mm-link .mm-logo {
-          height: 50px;
-          width: 50px; } }
 
 .alt-footer {
   background: linear-gradient(to bottom, #2a6ae2, #2155b5);
