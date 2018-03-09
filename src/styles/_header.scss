@@ -19,7 +19,7 @@
 }
 
 .header__logo {
-	background-image: url('dist/assets/logo.png');
+	background-image: url('https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/logo.png');
 	background-size: cover;
 	position: absolute;
 	z-index: 3;
@@ -59,7 +59,7 @@
 
 @media (max-width: 767px) {
 	.header {
-		background-image: url('dist/assets/header-image-mobile.jpg');
+		background-image: url('https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/header-image-mobile.jpg');
 		background-size: 100%;
 		padding-top: 100%;
 

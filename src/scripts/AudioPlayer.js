@@ -17,9 +17,9 @@ var AudioPlayer = (function() {
 	};
 
 	var tracks = [
-		'dist/assets/blue-apron.mp3',
-		'dist/assets/guru.mp3',
-		'dist/assets/spacious.mp3',
+		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1520636718/steam/blue-apron.mp3',
+		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1520636718/steam/guru.mp3',
+		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1520636716/steam/spacious.mp3',
 	];
 
 	function init() {
