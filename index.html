@@ -4,34 +4,31 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="We're making music our business by making music for business.">
-		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta property="og:title" content="Mobile Steam Unit: we make business nusic">
 		<meta property="og:description" content="We're making music our business by making music for business.">
-		<meta property="og:url" content="http://mobilesteamunit.com">
+		<meta property="og:url" content="https://mobilesteamunit.com">
 		<meta property="og:type" content="website">
-
-		<link rel="shortcut icon" href="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/favicon.png" type="image/x-icon">
-<!-- 	
-		<meta property="og:image" content="">
+		<meta property="og:image" content="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520879184/steam/fb-og.jpg">
 		<meta property="og:image:type" content="image/jpg">
-		<meta property="og:image:width" content="1800">
-		<meta property="og:image:height" content="1200">
-
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520876941/steam/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520876905/steam/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/favicon-16.png">
+		<link rel="manifest" href="/site.webmanifest?v=oLdYrlE7GY">
+		<link rel="mask-icon" href="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520876941/steam/safari-pinned-tab.svg" color="#4887f7">
+		<meta name="apple-mobile-web-app-title" content="Mobile Steam Unit">
+		<meta name="application-name" content="Mobile Steam Unit">
+		<meta name="msapplication-TileColor" content="#2d89ef">
 		<meta name="theme-color" content="#ffffff">
--->
 
 		<title>Mobile Steam Unit: we make business music</title>
 
-
 		<noscript id="deferred-styles">
-		<link rel="stylesheet" href="dist/styles/main.css">
+			<link rel="stylesheet" href="dist/styles/main.css">
 		</noscript>
+
 		<script>
 			var loadDeferredStyles = function() {
 				var addStylesNode = document.getElementById("deferred-styles");
@@ -55,7 +52,159 @@
 			}
 		</script>
 
-		<style data-inject="critical">.header,.header__video{position:relative}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}input{-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;border-radius:0;padding:0;outline:0}a{text-decoration:none}button{background-color:#000;border:none;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;border-radius:0;color:#fff;padding:0;margin:0}.header__video{width:100%;z-index:1}.header__overlay{bottom:0;left:0;position:absolute;right:0;top:0;z-index:2}.header__logo{background-image:url(https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/logo.png);background-size:cover;position:absolute;z-index:3}.header__message{color:#fff;position:absolute;z-index:3}@media (min-width:768px){.header{max-height:100vh;overflow:hidden}.header .header__logo{height:64px;left:20px;top:20px;width:150px}.header .header__message{font-size:7vw;left:10%;text-align:left;top:50%}.header .header__overlay{background-color:rgba(0,0,0,.2)}}@media (max-width:767px){.header{background-image:url(https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/header-image-mobile.jpg);background-size:100%;padding-top:100%}.header .header__video{display:none}.header .header__logo{left:10px;height:42.96px;top:10px;width:100px}.header .header__message{font-size:8vw;left:0;right:0;text-align:center;text-shadow:0 0 30px #000;top:calc(50% - 30px)}.header .header__overlay{background-color:rgba(0,0,0,.3)}}</style>
+		<style>
+			html {
+				transition: 300ms;
+			}
+		</style>
+
+		<script type="text/javascript">
+			// help fix unstyled flash of content for everything below header
+			// header css is injected into data-inject="critical below
+			var elm=document.getElementsByTagName("html")[0];
+			elm.style.opacity= 0;
+			document.addEventListener("DOMContentLoaded",function(event) { 
+				setTimeout(function() {
+					elm.style.opacity = 1; 
+				}, 15);
+			});
+		</script>
+
+		<style data-inject="critical">/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background-color: #000;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  padding: 0;
+  margin: 0; }
+
+.header {
+  position: relative; }
+
+.header__video {
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+
+.header__overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2; }
+
+.header__logo {
+  background-image: url("https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/logo.png");
+  background-size: cover;
+  position: absolute;
+  z-index: 3; }
+
+.header__message {
+  color: #fff;
+  position: absolute;
+  z-index: 3; }
+
+@media (min-width: 768px) {
+  .header {
+    max-height: 100vh;
+    overflow: hidden; }
+    .header .header__logo {
+      height: 64px;
+      left: 20px;
+      top: 20px;
+      width: 150px; }
+    .header .header__message {
+      font-size: 7vw;
+      left: 10%;
+      text-align: left;
+      top: 50%; }
+    .header .header__overlay {
+      background-color: rgba(0, 0, 0, 0.2); } }
+
+@media (max-width: 767px) {
+  .header {
+    background-image: url("https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/header-image-mobile.jpg");
+    background-size: 100%;
+    padding-top: 100%; }
+    .header .header__video {
+      display: none; }
+    .header .header__logo {
+      left: 10px;
+      height: 42.96px;
+      top: 10px;
+      width: 100px; }
+    .header .header__message {
+      font-size: 8vw;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-shadow: 0px 0px 30px #000;
+      top: calc(50% - 30px); }
+    .header .header__overlay {
+      background-color: rgba(0, 0, 0, 0.3); } }
+</style>
 	</head>
 
 	<body class="mobile-steam-unit">
@@ -243,8 +392,8 @@
 					<p class="testimonial__message">Donut simply could not exist without this song. Our mission is to improve company culture at the global scale: to strengthen employee bonds, to create a supportive and inclusive onboarding experience. And that's <span class="italic">exactly</span> what our theme song does for our employees here at Donut: it creates bonds, pushes us to cohere around our mission–<span class="bold">it strengthens our culture</span>.</p>
 					<div class="testimonial__icon testimonial__icon--dan"></div>
 					<div class="testimonial__name">
-						Dan Manian
-						<br><span class="testimonial__company">Donut</span>, Cofounder & CEO
+						Sarah Arnold
+						<br><span class="testimonial__company">Donut</span>, Cofounder
 						<br><span class="testimonial__type">Theme song</span>
 					</div>
 				</div>
@@ -312,12 +461,12 @@
 				<div class="member jeff">
 					<div class="picture"></div>
 					<div class="name">Jeff Manian</div>
-					<div class="title">Chief Engineer</div>
+					<div class="title">CTO</div>
 				</div>
 				<div class="member dan">
 					<div class="picture"></div>
 					<div class="name">Dan Manian</div>
-					<div class="title">VP Product</div>
+					<div class="title">CFO</div>
 				</div>
 				<div class="member aaron">
 					<div class="picture"></div>
@@ -335,7 +484,7 @@
 						<img class="logo" src="https://res.cloudinary.com/ddkucvkg0/image/upload/v1520636893/steam/logo.png" alt="Mobile Steam Unit">
 					</div>
 					<p class="contact__detail contact__detail--top">mobilesteamunit@gmail.com</p>
-					<p class="contact__detail contact__detail--bot">347-647-1700</p>
+					<p class="contact__detail contact__detail--bot">(347) 647-1700</p>
 				</div>
 				<form action="https://formspree.io/mobilesteamunit@gmail.com" id="contact-form" method="POST" class="contact__form">
 					<h1 class="form__heading">Say Hello!</h1>

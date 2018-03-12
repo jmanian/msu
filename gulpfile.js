@@ -15,19 +15,6 @@ var inlineCss = require('gulp-inline-css');
 var replace = require('gulp-replace');
 var fs = require('fs');
 
-// var partialsDir = 'src/partials';
-// var filenames = fs.readdirSync(partialsDir);
-
-// filenames.forEach(function (filename) {
-//   var matches = /^([^.]+).hbs$/.exec(filename);
-//   if (!matches) {
-//     return;
-//   }
-//   var name = matches[1];
-//   var template = fs.readFileSync(partialsDir + '/' + filename, 'utf8');
-//   hbs.registerPartial(name, template);
-// });
-
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
@@ -40,12 +27,6 @@ gulp.task('bs-reload', function () {
   browserSync.reload();
 });
 
-gulp.task('assets', function(){
-  gulp.src('src/assets/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('dist/assets/'));
-});
-
 gulp.task('styles', function(){
   gulp.src(['src/styles/**/[^_]*.scss'])
     .pipe(plumber({
@@ -56,8 +37,6 @@ gulp.task('styles', function(){
     .pipe(sass())
     .pipe(gulp.dest('dist/styles'))
 });
-    // .pipe(minifycss())
-    // .pipe(gulp.dest('dist/styles'))
 
 gulp.task('minify-styles', function(){
   gulp.src(['src/styles/**/[^_]*.scss'])
@@ -73,7 +52,7 @@ gulp.task('minify-styles', function(){
 });
 
 gulp.task('inline-css', ['styles'], function() {
-  gulp.src('./*.html')
+  gulp.src('./index.html')
     .pipe(replace(/<style data-inject="critical">.[\s\S]*<\/style>/, function() {
       var styles = fs.readFileSync('dist/styles/critical.css');
       return '<style data-inject="critical">'+styles+'</style>';
@@ -117,11 +96,10 @@ gulp.task('minify-scripts', function() {
 });
 
 
-gulp.task('default', ['scripts', 'assets', 'styles', 'inline-css', 'browser-sync'], function(){
-  gulp.watch("src/styles/**/*.scss", ['styles']);
-  gulp.watch("src/assets", ['assets']);
-  gulp.watch("dist/styles/**/*.css", ['inline-css']);
+gulp.task('default', ['scripts', 'styles', 'inline-css', 'browser-sync'], function(){
   gulp.watch("src/scripts/**/*.js", ['scripts']);
+  gulp.watch("src/styles/**/*.scss", ['styles']);
+  gulp.watch("dist/styles/**/*.css", ['inline-css']);
   gulp.watch("*.html", ['bs-reload']);
 });
 
