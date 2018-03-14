@@ -1,6 +1,7 @@
 var ConnectSection = (function() {
 
 	var instagram = {
+		images: [],
 		data: null,
 		loaded: false,
 		loading: false
@@ -50,15 +51,49 @@ var ConnectSection = (function() {
 		instagram.data = data;
 		instagram.loading = false;
 		instagram.loaded = true;
-		var images = data.user.media.nodes;
+
+		try {
+			setImagesFromData();
+		} catch (err) {
+			setFallbackImages();
+		} finally {
+			injectImagesIntoHtml();
+		}
+	}
+
+	function setImagesFromData() {
+		var arr = instagram.data.graphql.user.edge_owner_to_timeline_media.edges;
+		for(var i=0; i<arr.length; i++) {
+			instagram.images.push(arr[i].node.thumbnail_src);
+		}
+	}
+
+	function setFallbackImages() {
+		instagram.images = [
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_1.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_2.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_3.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_4.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_5.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_6.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040658/steam/ig_7.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_8.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_9.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_10.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_11.jpg',
+			'https://res.cloudinary.com/ddkucvkg0/image/upload/v1521040659/steam/ig_12.jpg'
+		];
+	}
+
+	function injectImagesIntoHtml() {
 		var output = '';
 
-		for(var i=0; i<images.length; i++) {
-			var img = images[i].thumbnail_src;
+		for(var i=0; i<instagram.images.length; i++) {
+			var img = instagram.images[i];
 
 			if(i%6===0) {
 				if(i!==0) output += '</div>'
-				if(i!==images.length) output += '<div class="steamfeed__row">';
+				if(i!==instagram.images.length) output += '<div class="steamfeed__row">';
 			}
 
 			output += '<div class="steamfeed__img"><img src="'+img+'" alt="" /></div>';
@@ -84,10 +119,8 @@ var ConnectSection = (function() {
 	}
 
 	function resizeInstagramSection() {
-		var newHeight = ($('.steamfeed__img').width() * 2) + 30;
-		var halfContent = $('.connect__content').height() / 2;
+		var newHeight = ((window.innerWidth + 340) / 6) * 2 + 30;
 		$('.connect').css('height', newHeight+'px');
-		$('.connect__content').css('padding-top', ((newHeight/2) - halfContent)+'px');
 	}
 
 	return {

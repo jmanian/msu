@@ -3,6 +3,7 @@
 **************************************************/
 .products {
 	background-color: $blue;
+	overflow: hidden;
 	@include transition(1000ms);
 }
 
@@ -59,16 +60,6 @@
 	}
 }
 
-.skew-bg::before {
-	content: "";
-	height: 150%;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: -1;
-	@include transform(skewY(-6deg));
-}
-
 .product-title {
 	color: #eee;
 	line-height: 2;
@@ -96,6 +87,10 @@
 **************************************************/
 .gigs {
 	z-index: 1;
+
+	.product-button {
+		color: $blue;
+	}
 }
 
 .gigs__content {
@@ -119,21 +114,16 @@
 	}
 }
 
-.skew-bg.gigs::before {
-	background: $blue;
-	top: -20%;
-}
-
 
 /**************************************************
 	PRODUCTS - MUSIC
 **************************************************/
 .music {
 	z-index: 2;
-}
 
-.skew-bg.music::before {
-	background-color: $green;
+	.product-button {
+		color: $green;
+	}
 }
 
 
@@ -143,6 +133,10 @@
 .jingles {
 	z-index: 3;
 	overflow: hidden;
+
+	.product-button {
+		color: $blue;
+	}
 }
 
 .jingles__content {
@@ -150,10 +144,6 @@
 	height: 500px;
 	position: relative;
 	width: 500px;
-}
-
-.skew-bg.jingles::before {
-	background-color: $purple;
 }
 
 
@@ -197,10 +187,18 @@
 			padding-bottom: 0;
 		}
 
+		.gigs__title {
+			z-index: 2;
+		}
+
 		.gigs__content,
 		.music__content,
 		.jingles__content {
 			order: 2;
+		}
+
+		.music__content iframe {
+			width: 100%;
 		}
 
 		.jingles__content {

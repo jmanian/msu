@@ -5,15 +5,15 @@
     padding: 40px 40px 30px;
 
 	.social__links {
-		display: flex;
-		flex-direction: row;
+		// display: flex;
+		// flex-direction: row;
 		margin: 0 auto;
-		max-width: 500px;
+		max-width: 600px;
 		width: 100%;
 
 		
 		.social__link {
-			flex: auto;
+			// flex: auto;
 
 			@include transition(100ms);
 
@@ -66,8 +66,19 @@
 
 @media (min-width: 768px) {
 	.alt-footer {
-		.social__link {
-			margin: 20px;
+		.social__links {
+			.social__link {
+				padding: 40px 4% 20px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.alt-footer {
+		.social__links {
+			padding: 0;
 		}
 	}
 }
