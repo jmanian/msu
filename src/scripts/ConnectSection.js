@@ -42,7 +42,8 @@ var ConnectSection = (function() {
 			success: processinstagram,
 			error: function(a,b,c) {
 				instagram.loading = false;
-				//do nothing
+				setFallbackImages();
+				injectImagesIntoHtml();
 			}
 		});
 	}
