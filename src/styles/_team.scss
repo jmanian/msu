@@ -10,7 +10,8 @@
 	.heading {
 		color: $blue;
 		margin: 0 0 50px;
-		text-align: center;
+    text-align: center;
+    @include heading-font;
 		@extend .header-font-size;
 	}
 }
