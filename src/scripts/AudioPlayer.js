@@ -19,8 +19,8 @@ var AudioPlayer = (function() {
 	var tracks = [
 		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1531767271/steam/dld-theme.mp3',
     'https://res.cloudinary.com/ddkucvkg0/video/upload/v1531767272/steam/donut-theme.mp3',
-    'https://res.cloudinary.com/ddkucvkg0/video/upload/v1532114084/steam/inbox-detox.mp3',
 		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1520636718/steam/guru.mp3',
+    'https://res.cloudinary.com/ddkucvkg0/video/upload/v1532114084/steam/inbox-detox.mp3',
 		'https://res.cloudinary.com/ddkucvkg0/video/upload/v1520636716/steam/spacious.mp3',
 	];
 
