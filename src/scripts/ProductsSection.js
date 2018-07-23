@@ -1,19 +1,37 @@
 var ProductsSection = (function() {
 
-	function init() {
-		$(window).scroll(function() {
-			runEffect();
-		});
+  var positionData = {
+    sectionOne: 0,
+    sectionTwo: 0,
+    sectionThree: 0,
+  };
 
+	function init() {
+    $(window).scroll(function() {
+      if(positionData.sectionOne === 0) {
+        setPositionData();
+      }
+      runEffect();
+    });
+    
+    $(window).resize(function() {
+      setPositionData();
+    });
+    
 		registerHandlers();
 	}
 
 	function registerHandlers() {
 		$('.trigger-contact').click(function() {
 			var select = $(this).data('selectval');
-			scrollToForm();
-			$('#request').val(select);
-		});
+      scrollToForm();
+      $('#request').val(select);
+      $('#name').focus();
+    });
+    
+    $('.yt-async').click(function() {
+      loadYoutubeAsync(this);
+    });
 	}
 
 	function scrollToForm(hash) {
@@ -23,29 +41,38 @@ var ProductsSection = (function() {
 	}
 
 	function runEffect() {
-		var yPos = $(window).scrollTop();
-		var gigsTop = $('.gigs').offset().top - ($(window).height()/2);
-		var musicTop = $('.music').offset().top - ($(window).height()/2);
-		var jingleTop = $('.jingles').offset().top - ($(window).height()/2);
-		var inGigs = yPos > gigsTop && yPos <= musicTop;
-		var inMusic = yPos > musicTop && yPos <= jingleTop;
-		var inJingles = yPos > jingleTop;
+    var ypos = $(window).scrollTop();
+    var inSectionOne = ypos > positionData.sectionOne && ypos <= positionData.sectionTwo;
+    var inSectionTwo = ypos > positionData.sectionTwo && ypos <= positionData.sectionThree;
+    var inSectionThree = ypos > positionData.sectionThree;
 
-		switch(true) {
-			case inGigs:
-				$('.products').css('background', '#4586ff');
-				$('.products .product-button').css('color', '#4586ff');
-				break;
-			case inMusic:
-				$('.products').css('background', '#2ac971');
-				$('.products .product-button').css('color', '#2ac971');
-				break;
-			case inJingles:
-				$('.products').css('background', '#147F96'); //d57421
-				$('.products .product-button').css('color', '#147F96');
-				break;
-		}
-	}
+    if(inSectionOne) {
+      updateProductSectionStyling('#fff');
+    } else if(inSectionTwo) {
+      updateProductSectionStyling('#4586ff');
+    } else if(inSectionThree) {
+      updateProductSectionStyling('#16135a');
+    }
+  }
+
+  function updateProductSectionStyling(color) {
+    $('.products').css('background', color);
+    $('.products .product-button').css('color', color);
+  }
+  
+  function loadYoutubeAsync(el) {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + el.dataset.video + el.dataset.params);
+    iframe.style.width = 315;
+    iframe.style.height = 560;
+    el.parentNode.replaceChild(iframe, el);
+  }
+
+  function setPositionData() {
+    positionData.sectionOne = $('.jingles').offset().top - (ScreenData.height/3);
+    positionData.sectionTwo = $('.gigs').offset().top - (ScreenData.height/3);
+    positionData.sectionThree = $('.art').offset().top - (ScreenData.height/3);
+  }
 
 	return {
 		init: init

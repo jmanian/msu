@@ -4,7 +4,7 @@
 }
 
 .testimonials__header {
-	color: $testimonial-green;
+	color: $blue;
 	margin: 0 auto;
 	max-width: 860px;
 	text-align: center;
@@ -25,7 +25,7 @@
 	margin: 30px auto;
 
 	.testimonial__message {
-		background-color: #daf5f7;
+		background-color: #eee;
 		color: #222;
 		line-height: 1.3;
 		padding: 25px;
@@ -34,7 +34,7 @@
 		@extend .body-font-size;
 
 		&::before {
-			background-color: #daf5f7;
+			background-color: #eee;
 			bottom: -10px;
 			content: "";
 			height: 20px;
@@ -52,26 +52,34 @@
 	}
 
 	.testimonial__icon {
-		background-image: url('https://res.cloudinary.com/ddkucvkg0/image/upload/v1520639245/steam/testimonial-sprite.jpg');
-		background-size: cover;
-		border: 4px solid $testimonial-green;
+    background-image: url('http://res.cloudinary.com/ddkucvkg0/image/upload/e_grayscale/v1532118264/steam/testimonial-sprite3.jpg');
+    background-size: cover;
+    border: 4px solid $blue;
 		height: 80px;
 		margin-top: 25px;
 		width: 80px;
 		@include border-radius(50%);
 	}
-
-	.testimonial__icon--alex {
-		background-position: 320px 0;
-	}
-
+  
 	.testimonial__icon--rick {
-		background-position: 0 0;
+    background-position: 0 0;
+  }
+  
+  .testimonial__icon--sarah {
+    background-position: -80px 0;
+  }
+  
+  .testimonial__icon--alex {
+    background-position: -160px 0;
+  }
+  
+	.testimonial__icon--nina {
+    background-position: -240px 0;
 	}
-
-	.testimonial__icon--dan {
-		background-position: 160px 0;
-	}
+  
+  .testimonial__icon--felix {
+    background-position: -320px 0;
+  }
 
 	.testimonial__name {
 		box-sizing: border-box;
@@ -82,7 +90,7 @@
 	}
 
 	.testimonial__company {
-		color: $testimonial-green;
+		color: $blue;
 		font-weight: bold;
 	}
 

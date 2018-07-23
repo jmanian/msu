@@ -1,6 +1,6 @@
 .audio,
 .tracks {
-	background-color: rgba(0,0,0, .2);
+  background-color: $blue;
 	box-sizing: border-box;
 	margin: 0 auto;
 	position: relative;
@@ -39,9 +39,6 @@
 	}
 }
 
-.tracks {
-}
-
 .track {
 	cursor: pointer;
 	height: 70px;
@@ -61,7 +58,7 @@
 		display: inline-block;
 		line-height: 70px;
 		padding: 0 0 0 30px;
-		@include body-font;
+    @include body-font;
 	}
 
 	.track__logo {
@@ -69,9 +66,19 @@
 		float: right;
 		margin: 0 30px 0 0;
 
-		&.track__logo--blueapron {
-			margin-top: 15px;	
-		}
+		&.track__logo--slack {
+      fill: #fff;
+      margin: 10px 20px 0 0;
+      width: 100px;
+    }
+    
+    &.track__logo--dld {
+      margin-top: 15px;
+    }
+
+    &.track__logo--donut {
+      margin-top: 22px;
+    }
 
 		&.track__logo--guru {
 			margin-top: 26px;	
