@@ -1,0 +1,19 @@
+{
+    "name": "Mobile Steam Unit",
+    "short_name": "Mobile Steam Unit",
+    "icons": [
+        {
+            "src": "https://res.cloudinary.com/ddkucvkg0/image/upload/v1520876940/steam/android-chrome-192x192.png?v=oLdYrlE7GY",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://res.cloudinary.com/ddkucvkg0/image/upload/v1520876941/steam/android-chrome-256x256.png?v=oLdYrlE7GY",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#4586ff",
+    "background_color": "#4586ff",
+    "display": "standalone"
+}
