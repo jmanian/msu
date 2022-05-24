@@ -1,17 +1,12 @@
 {
-  "name": "steam",
-  "version": "1.0.0",
-  "description": "",
-  "main": "",
   "scripts": {
     "clean": "rm -rf public",
     "scss": "sass music-for-business/styles/main.scss public/music-for-business/main.css -s compressed",
     "html": "cp index.html public/index.html && cp music-for-business/index.html public/music-for-business/index.html && cp 404.html public/404.html",
     "assets": "cp CNAME public/CNAME && cp site.webmanifest public/site.webmanifest && cp -R assets public/assets",
-    "build": "npm run clean && npm run scss && npm run html && npm run assets && rollup --config"
+    "build": "npm run clean && npm run scss && npm run html && npm run assets && rollup --config",
+    "publish-gh-pages": "npm run build && git subtree push --prefix public origin gh-pages"
   },
-  "author": "steam",
-  "license": "ISC",
   "devDependencies": {
     "rollup": "^2.70.1",
     "rollup-plugin-terser": "^7.0.2",

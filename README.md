@@ -1,16 +1,14 @@
-requires node version 4
-
 install
 ```
 npm install
 ```
 
-run locally
+build
 ```
-gulp
+npm run build
 ```
 
-build for prod
+publish to github pages
 ```
-gulp minify (x2) -- index.html doesn't rebuild on first run
+publish-gh-pages
 ```
