@@ -26,14 +26,14 @@
 			}
 
 			svg path {
-				fill: rgba(0,0,0, .3);
+				fill: #fafafa;
 			}
 		}
 	}
 }
 
 .alt-footer__slogan {
-	color: rgba(0,0,0, .4);
+	color: #fafafa;
 	line-height: 1.4;
 	margin: 10px auto;
 	max-width: 500px;
@@ -41,7 +41,7 @@
 }
 
 .alt-footer__copyright {
-	color: rgba(0,0,0, .4);
+	color: #fafafa;
 	text-align: center;
 	margin: 15px auto 0;
 	max-width: 400px;
@@ -54,7 +54,6 @@
 		display: block;
 		margin: 10px auto 0;
 		width: 40px;
-		fill: rgba(0,0,0, .4);
 		@include transition( 200ms );
 
 	    &:hover {
