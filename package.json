@@ -4,7 +4,7 @@
     "scss": "sass music-for-business/styles/main.scss public/assets/mfb-main.css -s compressed",
     "html": "mkdir public/music-for-business && cp index.html public/index.html && cp music-for-business/index.html public/music-for-business/index.html && cp 404.html public/404.html",
     "assets": "cp CNAME public/CNAME && cp site.webmanifest public/site.webmanifest && cp -R assets/ public/assets/",
-    "build": "npm run clean && npm run scss && npm run html && npm run assets && rollup --config",
+    "build": "npm run clean && npm run scss && npm run html && npm run assets && rollup --config && touch public/.nojekyll",
     "publish-gh-pages": "npm run build && git subtree push --prefix public origin gh-pages"
   },
   "devDependencies": {
